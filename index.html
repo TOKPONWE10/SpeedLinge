@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpeedLinge — Buanderie professionnelle a Parakou. Lavage, repassage et pressing express en 1h.">
+    <title>SpeedLinge — Buanderie Professionnelle | Parakou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #E8961E;
+            --orange-d: #CF830F;
+            --orange-l: #FEF3E2;
+            --navy: #0B2545;
+            --navy-l: #163A64;
+            --sky: #3AAFE0;
+            --sky-l: #E0F4FC;
+            --dark: #0A0F1A;
+            --g9: #111827;
+            --g8: #1F2937;
+            --g7: #374151;
+            --g6: #4B5563;
+            --g5: #6B7280;
+            --g4: #9CA3AF;
+            --g3: #D1D5DB;
+            --g2: #E5E7EB;
+            --g1: #F3F4F6;
+            --g0: #F9FAFB;
+            --w: #fff;
+            --ok: #10B981;
+            --r: 16px;
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+        body{font-family:'Instrument Sans',system-ui,sans-serif;color:var(--g8);background:var(--w);overflow-x:hidden}
+        img{display:block;max-width:100%}
+        .ctn{max-width:1200px;margin:0 auto;padding:0 24px}
+
+        /* === NAV === */
+        nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 24px;transition:all .4s}
+        nav.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--g2);padding:10px 24px}
+        .nav-c{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+        .n-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+        .n-logo-ic{width:42px;height:42px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+        .n-logo-ic img{width:100%;height:100%;object-fit:contain}
+        .n-logo-t{font-size:20px;font-weight:700;letter-spacing:-.5px}
+        .n-logo-t b{color:var(--orange)}
+        .n-logo-t span{color:var(--sky)}
+        .n-links{display:flex;align-items:center;gap:4px;list-style:none}
+        .n-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--g5);padding:8px 14px;border-radius:8px;transition:all .2s}
+        .n-links a:hover{color:var(--g9);background:rgba(0,0,0,.04)}
+        .n-cta{background:var(--navy)!important;color:#fff!important;font-weight:600!important;padding:10px 20px!important;border-radius:50px!important;display:inline-flex;align-items:center;gap:8px;font-size:13px!important;letter-spacing:.3px;transition:all .3s!important}
+        .n-cta:hover{background:var(--navy-l)!important;transform:translateY(-1px)}
+        .ham{display:none;background:0;border:0;font-size:22px;color:var(--g7);cursor:pointer}
+
+        .m-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);opacity:0;transition:opacity .3s}
+        .m-overlay.on{display:block;opacity:1}
+        .m-drawer{position:fixed;top:0;right:-320px;width:300px;height:100%;background:#fff;z-index:201;padding:28px;transition:right .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;gap:4px}
+        .m-drawer.on{right:0}
+        .m-drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+        .m-x{background:0;border:0;font-size:24px;color:var(--g5);cursor:pointer}
+        .m-drawer a{text-decoration:none;color:var(--g7);font-weight:500;font-size:15px;padding:14px 16px;border-radius:10px;display:block;transition:background .2s}
+        .m-drawer a:hover{background:var(--g1)}
+        .m-drawer .m-cta{margin-top:auto;background:var(--orange);color:#fff;text-align:center;border-radius:14px;font-weight:700;padding:16px}
+
+        /* === HERO === */
+        .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+        .hero-left{display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 0;padding-left:max(24px,calc((100vw - 1200px)/2 + 24px))}
+        .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--orange-l);color:var(--orange);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:8px 16px;border-radius:50px;margin-bottom:28px;width:fit-content}
+        .hero-tag .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);animation:pulse 2s infinite}
+        @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+        .hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,5.2vw,64px);font-weight:800;color:var(--navy);line-height:1.08;margin-bottom:24px;letter-spacing:-2px}
+        .hero h1 em{color:var(--orange);font-style:italic}
+        .hero-p{font-size:17px;color:var(--g5);line-height:1.75;max-width:440px;margin-bottom:36px}
+        .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+        .btn{display:inline-flex;align-items:center;gap:10px;font-family:inherit;font-weight:600;font-size:15px;padding:15px 30px;border-radius:50px;text-decoration:none;transition:all .35s;cursor:pointer;border:0}
+        .btn-o{background:var(--orange);color:#fff;box-shadow:0 4px 20px rgba(232,150,30,.3)}
+        .btn-o:hover{background:var(--orange-d);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,150,30,.35)}
+        .btn-g{background:0;color:var(--navy);border:1.5px solid var(--g3)}
+        .btn-g:hover{border-color:var(--sky);color:var(--sky)}
+
+        .hero-stats{display:flex;gap:40px}
+        .h-stat{position:relative;padding-left:16px}
+        .h-stat::before{content:'';position:absolute;left:0;top:2px;bottom:2px;width:3px;border-radius:3px;background:var(--orange)}
+        .h-stat-v{font-size:30px;font-weight:800;color:var(--navy);line-height:1}
+        .h-stat-l{font-size:12px;color:var(--g4);margin-top:4px;font-weight:500}
+
+        .hero-right{position:relative;overflow:hidden}
+        .hero-img-wrap{position:absolute;inset:0}
+        .hero-img{width:250%;height:140%;object-fit:cover;object-position:3% 30%;max-width:none}
+        .hero-img-overlay{position:absolute;inset:0;background:linear-gradient(90deg,var(--w) 0%,rgba(255,255,255,0) 10%)}
+        .hero-float{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-radius:16px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,.08);display:flex;align-items:center;gap:12px;animation:fl 5s ease-in-out infinite}
+        .hero-float.f1{bottom:30%;right:32px;animation-delay:0s}
+        .hero-float.f2{top:25%;left:20px;animation-delay:2.5s}
+        @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        .hf-ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+        .hf-ic.green{background:#D1FAE5;color:var(--ok)}
+        .hf-ic.blue{background:var(--sky-l);color:var(--sky)}
+        .hf-t{font-size:13px;font-weight:600;color:var(--g8)}
+        .hf-s{font-size:11px;color:var(--g4)}
+
+        /* === SCROLL REVEAL === */
+        .sr-section{height:140vh;position:relative}
+        .sr-sticky{position:sticky;top:8vh;padding:0 24px;display:flex;align-items:center;justify-content:center;height:84vh}
+        .sr-frame{width:100%;max-width:1100px;height:100%;border-radius:28px;overflow:hidden;position:relative}
+        .sr-img{width:100%;height:100%;object-fit:cover;transform:scale(1.25);clip-path:inset(35% round 24px);transition:clip-path .05s,transform .05s}
+        .sr-over{position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(10,15,26,.75) 0%,rgba(10,15,26,.15) 50%,transparent 100%);border-radius:28px;display:flex;flex-direction:column;justify-content:flex-end;padding:52px;opacity:0;transition:opacity .6s}
+        .sr-over.on{opacity:1}
+        .sr-over h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,46px);font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-1px}
+        .sr-over p{font-size:16px;color:rgba(255,255,255,.65);max-width:420px;line-height:1.7}
+        .sr-badge{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;padding:12px 24px;border-radius:14px;font-weight:700;font-size:18px;margin-top:20px;width:fit-content}
+
+        /* === MARQUEE === */
+        .marquee{background:var(--navy);padding:18px 0;overflow:hidden}
+        .mq-track{display:flex;gap:40px;white-space:nowrap;animation:mq 28s linear infinite}
+        .mq-item{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:16px;font-weight:600;color:rgba(255,255,255,.7);letter-spacing:.3px}
+        .mq-item .d{width:5px;height:5px;border-radius:50%;background:var(--orange)}
+        @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+        /* === SECTIONS === */
+        .sec{padding:120px 24px}
+        .sec-top{text-align:center;margin-bottom:72px}
+        .sec-tag{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+        .sec-h{font-family:'Playfair Display',serif;font-size:clamp(30px,3.8vw,44px);font-weight:800;color:var(--navy);margin-bottom:14px;letter-spacing:-1px;line-height:1.15}
+        .sec-h .o{color:var(--orange)}
+        .sec-p{font-size:15px;color:var(--g5);max-width:480px;margin:0 auto;line-height:1.7}
+
+        /* === BENTO SERVICES === */
+        .bento{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto auto;gap:16px}
+        .b-card{background:var(--g0);border:1px solid var(--g2);border-radius:20px;padding:36px;transition:all .4s;position:relative;overflow:hidden}
+        .b-card:hover{background:#fff;transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.06);border-color:transparent}
+        .b-card.b1{grid-column:1/5}
+        .b-card.b2{grid-column:5/9}
+        .b-card.b3{grid-column:9/13}
+        .b-num{position:absolute;top:20px;right:24px;font-size:80px;font-weight:900;color:var(--g2);line-height:1;letter-spacing:-4px;transition:color .4s}
+        .b-card:hover .b-num{color:var(--orange-l)}
+        .b-ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:24px}
+        .b-ic.o{background:var(--orange-l);color:var(--orange)}
+        .b-ic.b{background:var(--sky-l);color:var(--sky)}
+        .b-ic.d{background:var(--g2);color:var(--navy)}
+        .b-card h3{font-size:18px;font-weight:700;color:var(--g8);margin-bottom:10px}
+        .b-card>p{font-size:14px;color:var(--g5);line-height:1.7;margin-bottom:18px}
+        .b-feat{list-style:none}
+        .b-feat li{font-size:13px;color:var(--g6);padding:5px 0;display:flex;align-items:center;gap:8px}
+        .b-feat li i{color:var(--ok);font-size:10px}
+        .b-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:var(--orange);text-decoration:none;transition:gap .3s}
+        .b-link:hover{gap:12px}
+
+        /* === PRICING === */
+        .bg-s{background:var(--g0)}
+        .pr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+        .pr-c{background:#fff;border:1px solid var(--g2);border-radius:20px;text-align:center;overflow:hidden;transition:all .4s;position:relative}
+        .pr-c:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.05)}
+        .pr-c.pop{border:2px solid var(--orange)}
+        .pr-pop{background:var(--orange);color:#fff;font-size:10px;font-weight:800;padding:7px;letter-spacing:1.5px;text-transform:uppercase}
+        .pr-top{padding:32px 20px 12px}
+        .pr-ic{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:18px;background:var(--sky-l);color:var(--sky)}
+        .pr-top h3{font-size:15px;font-weight:700}
+        .pr-price{padding:8px 20px 16px}
+        .pr-v{font-size:50px;font-weight:800;color:var(--navy);letter-spacing:-3px}
+        .pr-u{font-size:15px;color:var(--g4);font-weight:500}
+        .pr-per{font-size:13px;color:var(--g5);margin-top:2px}
+        .pr-list{padding:0 20px 12px;list-style:none}
+        .pr-list li{font-size:13px;color:var(--g5);padding:9px 0;border-top:1px solid var(--g1);display:flex;align-items:center;gap:8px;justify-content:center}
+        .pr-list li i{color:var(--ok);font-size:10px}
+        .pr-btn-w{padding:4px 20px 24px}
+        .pr-btn{display:block;width:100%;padding:13px;border-radius:12px;font-family:inherit;font-size:14px;font-weight:600;text-decoration:none;text-align:center;transition:all .3s}
+        .pr-fill{background:var(--orange);color:#fff}
+        .pr-fill:hover{background:var(--orange-d)}
+        .pr-ghost{background:var(--g0);color:var(--navy);border:1px solid var(--g2)}
+        .pr-ghost:hover{border-color:var(--sky);color:var(--sky)}
+
+        /* === ABO === */
+        .abo-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .abo-c{background:#fff;border:1px solid var(--g2);border-radius:20px;overflow:hidden;transition:all .4s}
+        .abo-c:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
+        .abo-h{padding:22px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--g1)}
+        .abo-ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0}
+        .abo-ic.ab{background:linear-gradient(135deg,var(--sky),#2B99C9)}
+        .abo-ic.ao{background:linear-gradient(135deg,var(--orange),var(--orange-d))}
+        .abo-ic.ad{background:linear-gradient(135deg,var(--navy),var(--navy-l))}
+        .abo-h h3{font-size:16px;font-weight:700}
+        .abo-h span{font-size:11px;color:var(--g5);display:block;margin-top:1px}
+        .abo-b{padding:8px 24px 24px}
+        .abo-r{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--g1)}
+        .abo-r:last-of-type{border:0}
+        .abo-l{font-size:14px;color:var(--g6)}
+        .abo-v{font-size:16px;font-weight:700;color:var(--navy)}
+        .abo-old{font-size:12px;color:#EF4444;text-decoration:line-through;margin-left:6px;font-weight:400}
+        .abo-btn{display:block;width:100%;margin-top:16px;padding:13px;text-align:center;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;transition:all .3s;background:var(--g0);color:var(--navy);border:1px solid var(--g2)}
+        .abo-btn:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
+
+        /* === TESTIMONIALS === */
+        .testi{background:var(--dark);position:relative;overflow:hidden}
+        .testi-pat{position:absolute;inset:0;opacity:.03;background-image:radial-gradient(circle at 1px 1px,#fff 1px,transparent 0);background-size:32px 32px}
+        .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
+        .t-c{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:32px;transition:all .3s}
+        .t-c:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
+        .t-q{font-size:28px;color:var(--orange);margin-bottom:14px;opacity:.6}
+        .t-txt{font-size:15px;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:24px;font-style:italic}
+        .t-f{display:flex;align-items:center;justify-content:space-between}
+        .t-a{display:flex;align-items:center;gap:12px}
+        .t-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-d));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#fff}
+        .t-n{font-size:14px;font-weight:600;color:#fff}
+        .t-r{font-size:11px;color:rgba(255,255,255,.35)}
+        .t-s{color:#FCD34D;font-size:12px}
+
+        /* === CTA === */
+        .cta{position:relative;overflow:hidden}
+        .cta-inner{display:grid;grid-template-columns:1fr 1fr;min-height:420px}
+        .cta-left{background:var(--navy);padding:72px 60px;display:flex;flex-direction:column;justify-content:center}
+        .cta-left h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);font-weight:800;color:#fff;margin-bottom:16px;letter-spacing:-1px;line-height:1.15}
+        .cta-left p{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:28px;max-width:380px;line-height:1.7}
+        .btn-w{background:#fff;color:var(--orange);padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:10px;transition:all .3s;width:fit-content}
+        .btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+        .cta-right{background:var(--orange);display:flex;align-items:center;justify-content:center;padding:60px}
+        .cta-circle{width:220px;height:220px;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+        .cta-circle .big{font-family:'Playfair Display',serif;font-size:56px;font-weight:800;color:#fff;line-height:1}
+        .cta-circle .sub{font-size:14px;color:rgba(255,255,255,.8);margin-top:4px;font-weight:500}
+
+        /* === CONTACT === */
+        .ct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px}
+        .ct-form{display:flex;flex-direction:column;gap:16px}
+        .ct-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+        .ff label{display:block;font-size:13px;font-weight:600;color:var(--g7);margin-bottom:6px}
+        .ff input,.ff select,.ff textarea{width:100%;padding:13px 16px;border:1.5px solid var(--g2);border-radius:12px;font-family:inherit;font-size:14px;color:var(--g8);outline:0;transition:all .2s;background:var(--g0)}
+        .ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--sky);background:#fff;box-shadow:0 0 0 3px rgba(58,175,224,.08)}
+        .ff textarea{resize:vertical;min-height:100px}
+        .ct-sub{background:var(--navy);color:#fff;padding:15px;border:0;border-radius:12px;font-family:inherit;font-weight:700;font-size:15px;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px}
+        .ct-sub:hover{background:var(--navy-l);transform:translateY(-1px)}
+        .ct-info{display:flex;flex-direction:column;gap:12px}
+        .ci{display:flex;gap:14px;padding:18px;border-radius:14px;border:1px solid var(--g2);background:#fff;transition:all .3s}
+        .ci:hover{border-color:var(--sky-l);box-shadow:0 4px 12px rgba(0,0,0,.03)}
+        .ci-ic{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+        .ci-ic.o{background:var(--orange-l);color:var(--orange)}
+        .ci-ic.b{background:var(--sky-l);color:var(--sky)}
+        .ci h4{font-size:14px;font-weight:700;color:var(--g8);margin-bottom:2px}
+        .ci p{font-size:13px;color:var(--g5);line-height:1.5}
+        .soc-w h4{font-size:14px;font-weight:700;margin:8px 0 12px}
+        .socs{display:flex;gap:10px}
+        .sc{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;text-decoration:none;transition:all .3s}
+        .sc:hover{transform:translateY(-3px)}
+        .sc.fb{background:#1877F2}
+        .sc.tt{background:#000}
+        .sc.wa{background:#25D366}
+
+        /* === MAP === */
+        .map{height:360px;width:100%}
+        .map iframe{width:100%;height:100%;border:0;display:block}
+
+        /* === FOOTER === */
+        footer{background:var(--dark);color:#fff;padding:64px 24px 0}
+        .ft-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1fr 1.3fr;gap:40px}
+        .ft-about p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.8;margin:16px 0 20px}
+        footer h5{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:18px;color:rgba(255,255,255,.75)}
+        .ft-links a{display:block;font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;padding:5px 0;transition:all .2s}
+        .ft-links a:hover{color:var(--orange);padding-left:4px}
+        .ft-ct p{font-size:13px;color:rgba(255,255,255,.4);line-height:2.2}
+        .ft-ct i{color:var(--orange);margin-right:8px;width:14px;text-align:center}
+        .ft-bot{max-width:1200px;margin:48px auto 0;padding:24px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+        .ft-bot p,.ft-bot a{font-size:12px;color:rgba(255,255,255,.25);text-decoration:none}
+        .ft-bot a:hover{color:var(--orange)}
+        .ft-leg{display:flex;gap:24px}
+
+        /* === FLOATERS === */
+        .waf{position:fixed;bottom:24px;left:24px;z-index:99;width:56px;height:56px;border-radius:16px;background:#25D366;color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .3s}
+        .waf:hover{transform:translateY(-3px) scale(1.05)}
+        .btt{position:fixed;bottom:24px;right:24px;z-index:99;width:44px;height:44px;border-radius:12px;background:var(--navy);color:#fff;border:0;font-size:16px;cursor:pointer;transition:all .3s;opacity:0;visibility:hidden}
+        .btt.on{opacity:1;visibility:visible}
+        .btt:hover{background:var(--navy-l);transform:translateY(-2px)}
+
+        /* === REVEAL === */
+        .rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+        .rv.on{opacity:1;transform:translateY(0)}
+        .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+        /* === RESPONSIVE === */
+        @media(max-width:1024px){
+            .hero{grid-template-columns:1fr;min-height:auto}
+            .hero-left{padding:130px 24px 60px;text-align:center;align-items:center}
+            .hero-p{margin-left:auto;margin-right:auto}
+            .hero-btns{justify-content:center}
+            .hero-stats{justify-content:center}
+            .hero-right{height:50vh}
+            .hero-img-overlay{background:linear-gradient(180deg,var(--w) 0%,rgba(255,255,255,0) 30%)}
+            .bento{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+            .b-card.b1,.b-card.b2,.b-card.b3{grid-column:auto}
+            .pr-grid{grid-template-columns:1fr 1fr}
+            .abo-g{grid-template-columns:1fr 1fr}
+            .t-grid{grid-template-columns:1fr 1fr}
+            .cta-inner{grid-template-columns:1fr}
+            .cta-right{display:none}
+            .cta-left{text-align:center;align-items:center}
+            .ft-grid{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:768px){
+            .n-links{display:none}.ham{display:flex}
+            .hero-right{height:40vh}
+            .hero-float{display:none}
+            .sec{padding:80px 24px}
+            .bento,.abo-g,.t-grid{grid-template-columns:1fr}
+            .pr-grid{grid-template-columns:1fr 1fr}
+            .ct-grid{grid-template-columns:1fr}
+            .ct-row{grid-template-columns:1fr}
+            .ft-grid{grid-template-columns:1fr;gap:28px}
+            .ft-bot{flex-direction:column;text-align:center}
+            .sr-section{height:90vh}.sr-sticky{height:60vh}
+            .sr-over{padding:28px}
+        }
+        @media(max-width:480px){
+            .pr-grid{grid-template-columns:1fr}
+            .hero-actions{flex-direction:column;align-items:center}
+            .hero-stats{flex-direction:column;gap:16px;align-items:center}
+            .ft-leg{flex-direction:column;gap:8px}
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nav-c">
+        <a href="#top" class="n-logo"><div class="n-logo-ic"><img src="img/logo.jpg" alt="SpeedLinge Logo"></div><div class="n-logo-t"><b>Speed</b><span>Linge</span></div></a>
+        <ul class="n-links">
+            <li><a href="#top">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#abo">Abonnements</a></li>
+            <li><a href="#avis">Avis</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation." target="_blank" class="n-cta"><i class="fab fa-whatsapp"></i> Reserver</a></li>
+        </ul>
+        <button class="ham" id="ham"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+<div class="m-overlay" id="m-ov"></div>
+<div class="m-drawer" id="m-dr">
+    <div class="m-drawer-top"><div class="n-logo-t"><b>Speed</b><span>Linge</span></div><button class="m-x" id="m-x"><i class="fas fa-xmark"></i></button></div>
+    <a href="#top">Accueil</a><a href="#services">Services</a><a href="#tarifs">Tarifs</a><a href="#abo">Abonnements</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
+    <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation." target="_blank" class="m-cta"><i class="fab fa-whatsapp"></i> Reserver</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+    <div class="hero-left">
+        <div class="hero-tag"><div class="pulse-dot"></div> Service express — 1 heure max</div>
+        <h1>Votre <em>linge propre</em> en un clin d'oeil</h1>
+        <p class="hero-p">SpeedLinge, votre buanderie professionnelle a Parakou. Lavage, sechage, repassage et pressing de qualite.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation." target="_blank" class="btn btn-o"><i class="fab fa-whatsapp"></i> Reserver</a>
+            <a href="#services" class="btn btn-g">Nos services <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-stats">
+            <div class="h-stat"><div class="h-stat-v">1h</div><div class="h-stat-l">Delai max</div></div>
+            <div class="h-stat"><div class="h-stat-v">100+</div><div class="h-stat-l">Clients</div></div>
+            <div class="h-stat"><div class="h-stat-v">6j/7</div><div class="h-stat-l">Ouvert</div></div>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="hero-img-wrap">
+            <img class="hero-img" src="img/promo.jpg" alt="SpeedLinge - Service professionnel">
+            <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-float f1">
+            <div class="hf-ic green"><i class="fas fa-check"></i></div>
+            <div><div class="hf-t">Qualite garantie</div><div class="hf-s">Machines Samsung pro</div></div>
+        </div>
+        <div class="hero-float f2">
+            <div class="hf-ic blue"><i class="fas fa-truck-fast"></i></div>
+            <div><div class="hf-t">Livraison possible</div><div class="hf-s">Recuperation & livraison</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- SCROLL REVEAL -->
+<div class="sr-section" id="sr">
+    <div class="sr-sticky">
+        <div class="sr-frame">
+            <img class="sr-img" id="sr-img" src="img/banner.jpg" alt="SpeedLinge - Service de Lavage et Repassage">
+            <div class="sr-over" id="sr-over">
+                <h2>Un service qui change<br>votre quotidien</h2>
+                <p>Machines professionnelles, produits premium, equipe dediee. Votre linge merite le meilleur.</p>
+                <div class="sr-badge"><i class="fas fa-stopwatch"></i> 01h maximum</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <div class="mq-track">
+        <div class="mq-item"><span class="d"></span>Lavage</div><div class="mq-item"><span class="d"></span>Sechage</div><div class="mq-item"><span class="d"></span>Repassage</div><div class="mq-item"><span class="d"></span>Pressing</div><div class="mq-item"><span class="d"></span>Pliage</div><div class="mq-item"><span class="d"></span>Livraison</div><div class="mq-item"><span class="d"></span>Express 1h</div><div class="mq-item"><span class="d"></span>Qualite pro</div>
+        <div class="mq-item"><span class="d"></span>Lavage</div><div class="mq-item"><span class="d"></span>Sechage</div><div class="mq-item"><span class="d"></span>Repassage</div><div class="mq-item"><span class="d"></span>Pressing</div><div class="mq-item"><span class="d"></span>Pliage</div><div class="mq-item"><span class="d"></span>Livraison</div><div class="mq-item"><span class="d"></span>Express 1h</div><div class="mq-item"><span class="d"></span>Qualite pro</div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+    <div class="ctn">
+        <div class="sec-top"><div class="sec-tag">Nos services</div><h2 class="sec-h">Des prestations <span class="o">professionnelles</span></h2><p class="sec-p">Chaque vetement est traite avec soin par notre equipe dediee.</p></div>
+        <div class="bento">
+            <div class="b-card b1 rv"><div class="b-num">01</div><div class="b-ic o"><i class="fas fa-shirt"></i></div><h3>Lavage + Essorage + Pliage</h3><p>L'offre standard : lavage soigne, essorage delicat, pliage minutieux.</p><ul class="b-feat"><li><i class="fas fa-check"></i>Tri couleur & tissu</li><li><i class="fas fa-check"></i>Temperature adaptee</li><li><i class="fas fa-check"></i>Pliage organise</li></ul><a href="https://wa.me/22995050715?text=Option%20standard%20SVP" target="_blank" class="b-link">Commander <i class="fas fa-arrow-right"></i></a></div>
+            <div class="b-card b2 rv d1"><div class="b-num">02</div><div class="b-ic b"><i class="fas fa-wind"></i></div><h3>Standard + Sechage + Repassage</h3><p>L'offre complete : sechage machine et repassage vapeur professionnel.</p><ul class="b-feat"><li><i class="fas fa-check"></i>Sechage rapide</li><li><i class="fas fa-check"></i>Repassage vapeur</li><li><i class="fas fa-check"></i>Pliage ou cintres</li></ul><a href="https://wa.me/22995050715?text=Option%20complete%20SVP" target="_blank" class="b-link">Commander <i class="fas fa-arrow-right"></i></a></div>
+            <div class="b-card b3 rv d2"><div class="b-num">03</div><div class="b-ic d"><i class="fas fa-gem"></i></div><h3>Pressing professionnel</h3><p>Nettoyage expert pour vetements delicats, costumes, tenues speciales.</p><ul class="b-feat"><li><i class="fas fa-check"></i>Detachage pro</li><li><i class="fas fa-check"></i>Tissus delicats</li><li><i class="fas fa-check"></i>Finition premium</li></ul><a href="https://wa.me/22995050715?text=Pressing%20SVP" target="_blank" class="b-link">Commander <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+    </div>
+</section>
+
+<!-- TARIFS -->
+<section class="sec bg-s" id="tarifs">
+    <div class="ctn">
+        <div class="sec-top"><div class="sec-tag">Nos tarifs</div><h2 class="sec-h">Des prix <span class="o">transparents</span></h2><p class="sec-p">Clairs, competitifs et sans surprise.</p></div>
+        <div class="pr-grid">
+            <div class="pr-c rv"><div class="pr-top"><div class="pr-ic"><i class="fas fa-shirt"></i></div><h3>Lavage</h3></div><div class="pr-price"><div class="pr-v">100<span class="pr-u">f</span></div><div class="pr-per">par linge</div></div><ul class="pr-list"><li><i class="fas fa-check"></i>Lavage pro</li><li><i class="fas fa-check"></i>Lessive premium</li><li><i class="fas fa-check"></i>Essorage + pliage</li></ul><div class="pr-btn-w"><a href="https://wa.me/22995050715?text=Lavage%20SVP" target="_blank" class="pr-btn pr-ghost">Choisir</a></div></div>
+            <div class="pr-c pop rv d1"><div class="pr-pop">POPULAIRE</div><div class="pr-top"><div class="pr-ic" style="background:var(--orange-l);color:var(--orange)"><i class="fas fa-wind"></i></div><h3>Sechage</h3></div><div class="pr-price"><div class="pr-v">500<span class="pr-u">f</span></div><div class="pr-per">1 a 25 linges</div></div><ul class="pr-list"><li><i class="fas fa-check"></i>Sechage rapide</li><li><i class="fas fa-check"></i>Tous tissus</li><li><i class="fas fa-check"></i>Economique</li></ul><div class="pr-btn-w"><a href="https://wa.me/22995050715?text=S%C3%A9chage%20SVP" target="_blank" class="pr-btn pr-fill">Choisir</a></div></div>
+            <div class="pr-c rv d2"><div class="pr-top"><div class="pr-ic"><i class="fas fa-temperature-high"></i></div><h3>Repassage</h3></div><div class="pr-price"><div class="pr-v">200<span class="pr-u">f</span></div><div class="pr-per">par linge</div></div><ul class="pr-list"><li><i class="fas fa-check"></i>Repassage pro</li><li><i class="fas fa-check"></i>Finition nette</li><li><i class="fas fa-check"></i>Plis precis</li></ul><div class="pr-btn-w"><a href="https://wa.me/22995050715?text=Repassage%20SVP" target="_blank" class="pr-btn pr-ghost">Choisir</a></div></div>
+            <div class="pr-c rv d3"><div class="pr-top"><div class="pr-ic" style="background:var(--g2);color:var(--navy)"><i class="fas fa-gem"></i></div><h3>Pressing</h3></div><div class="pr-price"><div class="pr-v">1000<span class="pr-u">f</span></div><div class="pr-per">par tenue</div></div><ul class="pr-list"><li><i class="fas fa-check"></i>Nettoyage expert</li><li><i class="fas fa-check"></i>Repassage inclus</li><li><i class="fas fa-check"></i>Pret en 24h</li></ul><div class="pr-btn-w"><a href="https://wa.me/22995050715?text=Pressing%20SVP" target="_blank" class="pr-btn pr-ghost">Choisir</a></div></div>
+        </div>
+        <p style="text-align:center;margin-top:28px;color:var(--g4);font-size:13px">25 linges = 2 500f &bull; Degressif en volume</p>
+    </div>
+</section>
+
+<!-- ABO -->
+<section class="sec" id="abo">
+    <div class="ctn">
+        <div class="sec-top"><div class="sec-tag">Abonnements</div><h2 class="sec-h">Offres <span class="o">avantageuses</span></h2><p class="sec-p">Economisez chaque mois avec nos formules.</p></div>
+        <div class="abo-g">
+            <div class="abo-c rv"><div class="abo-h"><div class="abo-ic ab"><i class="fas fa-shirt"></i></div><div><h3>Standard</h3><span>Lavage + Essorage + Pliage</span></div></div><div class="abo-b"><div class="abo-r"><span class="abo-l">100 linges</span><div><span class="abo-v">9 000f</span><span class="abo-old">10 000f</span></div></div><div class="abo-r"><span class="abo-l">150 linges</span><div><span class="abo-v">14 000f</span><span class="abo-old">15 000f</span></div></div><div class="abo-r"><span class="abo-l">200 linges</span><div><span class="abo-v">19 000f</span><span class="abo-old">20 000f</span></div></div><div class="abo-r"><span class="abo-l">Drap / pull / serviette</span><div><span class="abo-v">150f</span></div></div><a href="https://wa.me/22995050715?text=Abo%20Standard" target="_blank" class="abo-btn">Souscrire</a></div></div>
+            <div class="abo-c rv d1"><div class="abo-h"><div class="abo-ic ao"><i class="fas fa-star"></i></div><div><h3>Complete</h3><span>Lavage + Sechage + Pliage</span></div></div><div class="abo-b"><div class="abo-r"><span class="abo-l">100 linges</span><div><span class="abo-v">10 000f</span><span class="abo-old">12 000f</span></div></div><div class="abo-r"><span class="abo-l">150 linges</span><div><span class="abo-v">15 000f</span><span class="abo-old">18 000f</span></div></div><div class="abo-r"><span class="abo-l">200 linges</span><div><span class="abo-v">20 000f</span><span class="abo-old">24 000f</span></div></div><div class="abo-r"><span class="abo-l">Drap / pull / serviette</span><div><span class="abo-v">150f</span></div></div><a href="https://wa.me/22995050715?text=Abo%20Complet" target="_blank" class="abo-btn">Souscrire</a></div></div>
+            <div class="abo-c rv d2"><div class="abo-h"><div class="abo-ic ad"><i class="fas fa-gem"></i></div><div><h3>Pro</h3><span>Repassage professionnel</span></div></div><div class="abo-b"><div class="abo-r"><span class="abo-l">10 linges</span><div><span class="abo-v">1 500f</span><span class="abo-old">2 000f</span></div></div><div class="abo-r"><span class="abo-l">25 linges</span><div><span class="abo-v">4 000f</span><span class="abo-old">5 000f</span></div></div><div class="abo-r"><span class="abo-l">50 linges</span><div><span class="abo-v">7 500f</span><span class="abo-old">10 000f</span></div></div><a href="https://wa.me/22995050715?text=Abo%20Pro" target="_blank" class="abo-btn">Souscrire</a></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTI -->
+<section class="sec testi" id="avis">
+    <div class="testi-pat"></div>
+    <div class="ctn">
+        <div class="sec-top"><div class="sec-tag" style="color:var(--orange)">Temoignages</div><h2 class="sec-h" style="color:#fff">Ce que disent nos <span class="o">clients</span></h2><p class="sec-p" style="color:rgba(255,255,255,.4)">Leur satisfaction parle d'elle-meme.</p></div>
+        <div class="t-grid">
+            <div class="t-c rv"><div class="t-q"><i class="fas fa-quote-left"></i></div><p class="t-txt">"Je confie mon linge a SpeedLinge depuis 2 ans. Service rapide, linge toujours impeccable."</p><div class="t-f"><div class="t-a"><div class="t-av">S</div><div><div class="t-n">Sophie M.</div><div class="t-r">Cliente fidele</div></div></div><div class="t-s"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div>
+            <div class="t-c rv d1"><div class="t-q"><i class="fas fa-quote-left"></i></div><p class="t-txt">"Costumes toujours impeccables. SpeedLinge gere tout avec un professionnalisme rare."</p><div class="t-f"><div class="t-a"><div class="t-av">T</div><div><div class="t-n">Thomas L.</div><div class="t-r">Commercial</div></div></div><div class="t-s"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div></div>
+            <div class="t-c rv d2"><div class="t-q"><i class="fas fa-quote-left"></i></div><p class="t-txt">"Premiere visite et agreablement surprise. Qualite du service et accueil chaleureux."</p><div class="t-f"><div class="t-a"><div class="t-av">C</div><div><div class="t-n">Camille D.</div><div class="t-r">Nouvelle cliente</div></div></div><div class="t-s"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="cta-inner">
+        <div class="cta-left">
+            <h2>Pret a liberer<br>du temps ?</h2>
+            <p>Reservez en un clic. Nous nous occupons de votre linge avec le plus grand soin.</p>
+            <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation." target="_blank" class="btn-w"><i class="fab fa-whatsapp"></i> Reserver sur WhatsApp</a>
+        </div>
+        <div class="cta-right">
+            <div class="cta-circle"><div class="big">1h</div><div class="sub">maximum</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+    <div class="ctn">
+        <div class="sec-top"><div class="sec-tag">Contact</div><h2 class="sec-h">Parlons de votre <span class="o">linge</span></h2><p class="sec-p">Question, devis, reservation — nous repondons vite.</p></div>
+        <div class="ct-grid">
+            <form class="ct-form rv">
+                <div class="ct-row"><div class="ff"><label>Prenom</label><input type="text" placeholder="Votre prenom"></div><div class="ff"><label>Nom</label><input type="text" placeholder="Votre nom"></div></div>
+                <div class="ff"><label>Email</label><input type="email" placeholder="votre@email.com"></div>
+                <div class="ff"><label>Telephone</label><input type="tel" placeholder="+229 XX XX XX XX"></div>
+                <div class="ff"><label>Sujet</label><select><option value="">Selectionnez</option><option>Reservation</option><option>Information</option><option>Devis</option><option>Autre</option></select></div>
+                <div class="ff"><label>Message</label><textarea placeholder="Decrivez votre besoin..."></textarea></div>
+                <button type="submit" class="ct-sub"><i class="fas fa-paper-plane"></i> Envoyer</button>
+            </form>
+            <div class="ct-info rv d1">
+                <div class="ci"><div class="ci-ic o"><i class="fas fa-location-dot"></i></div><div><h4>Adresse</h4><p>Parakou, Quartier Arafat<br>1ere von a droite apres l'ecole La Misericorde</p></div></div>
+                <div class="ci"><div class="ci-ic b"><i class="fas fa-phone"></i></div><div><h4>Telephone / WhatsApp</h4><p>+229 95 05 07 15</p></div></div>
+                <div class="ci"><div class="ci-ic o"><i class="fas fa-mobile-screen"></i></div><div><h4>MoMo MTN</h4><p>59 17 14 56</p></div></div>
+                <div class="ci"><div class="ci-ic b"><i class="fas fa-clock"></i></div><div><h4>Horaires</h4><p>Mardi - Dimanche : 09h - 19h<br>Ferme le lundi</p></div></div>
+                <div class="soc-w"><h4>Suivez-nous</h4><div class="socs"><a href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" class="sc fb"><i class="fab fa-facebook-f"></i></a><a href="https://www.tiktok.com/@speedlinge" target="_blank" class="sc tt"><i class="fab fa-tiktok"></i></a><a href="https://wa.me/22995050715" target="_blank" class="sc wa"><i class="fab fa-whatsapp"></i></a></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAP -->
+<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.12!2d2.626634!3d9.345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sParakou!5e0!3m2!1sfr!2sbj" allowfullscreen="" loading="lazy"></iframe></div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="ft-grid">
+        <div class="ft-about"><div class="n-logo"><div class="n-logo-ic"><img src="img/logo.jpg" alt="SpeedLinge Logo"></div><div class="n-logo-t"><b>Speed</b><span>Linge</span></div></div><p>Buanderie professionnelle a Parakou. Service rapide, soigne et accessible.</p><div class="socs"><a href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" class="sc fb"><i class="fab fa-facebook-f"></i></a><a href="https://www.tiktok.com/@speedlinge" target="_blank" class="sc tt"><i class="fab fa-tiktok"></i></a><a href="https://wa.me/22995050715" target="_blank" class="sc wa"><i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="ft-links"><h5>Navigation</h5><a href="#top">Accueil</a><a href="#services">Services</a><a href="#tarifs">Tarifs</a><a href="#abo">Abonnements</a><a href="#contact">Contact</a></div>
+        <div class="ft-links"><h5>Services</h5><a href="#services">Lavage & Pliage</a><a href="#services">Sechage</a><a href="#services">Repassage</a><a href="#services">Pressing</a></div>
+        <div class="ft-ct"><h5>Contact</h5><p><i class="fas fa-location-dot"></i>Parakou, Quartier Arafat</p><p><i class="fas fa-phone"></i>+229 95 05 07 15</p><p><i class="fas fa-clock"></i>Mar - Dim : 09h - 19h</p><p><i class="fas fa-mobile-screen"></i>MoMo : 59 17 14 56</p></div>
+    </div>
+    <div class="ft-bot"><p>&copy; 2024 SpeedLinge — <a href="#" style="color:var(--orange);font-weight:600">UpTech Agency</a></p><div class="ft-leg"><a href="mentions-legales.html">Mentions legales</a><a href="mentions-legales.html">Confidentialite</a><a href="mentions-legales.html">CGV</a></div></div>
+</footer>
+
+<a href="https://wa.me/22995050715" target="_blank" class="waf"><i class="fab fa-whatsapp"></i></a>
+<button class="btt" id="btt"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+
+// Mobile
+const ham=$('#ham'),dr=$('#m-dr'),ov=$('#m-ov'),mx=$('#m-x');
+const oD=()=>{dr.classList.add('on');ov.classList.add('on');document.body.style.overflow='hidden'};
+const cD=()=>{dr.classList.remove('on');ov.classList.remove('on');document.body.style.overflow=''};
+ham.onclick=oD;mx.onclick=cD;ov.onclick=cD;
+dr.querySelectorAll('a').forEach(a=>a.onclick=cD);
+
+// Nav
+const nav=$('#nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60));
+
+// Back top
+const btt=$('#btt');
+window.addEventListener('scroll',()=>btt.classList.toggle('on',scrollY>500));
+btt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+// Smooth
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){
+    e.preventDefault();const t=$(this.getAttribute('href'));
+    if(t)scrollTo({top:t.offsetTop-72,behavior:'smooth'});
+}));
+
+// Reveal
+const rObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');rObs.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+$$('.rv').forEach(el=>rObs.observe(el));
+
+// Scroll image reveal
+const srSec=$('#sr'),srImg=$('#sr-img'),srOv=$('#sr-over');
+function ease(t){return 1-Math.pow(1-t,3)}
+function upSR(){
+    if(!srSec)return;
+    const r=srSec.getBoundingClientRect(),h=srSec.offsetHeight,vh=innerHeight;
+    const p=Math.max(0,Math.min(1,(vh-r.top)/(h+vh)));
+    const e=ease(p);
+    const ins=35-35*e;
+    const sc=1.25-.25*e;
+    const rd=24-20*e;
+    srImg.style.clipPath=`inset(${ins}% round ${rd}px)`;
+    srImg.style.transform=`scale(${sc})`;
+    srOv.classList.toggle('on',p>.7);
+}
+window.addEventListener('scroll',upSR,{passive:true});
+upSR();
+</script>
+</body>
+</html>
