@@ -912,7 +912,7 @@ nav.solid {
 }
 
 /* ============================================
-   TÉMOIGNAGES
+   SECTION AVIS — fond sombre commun
    ============================================ */
 .testi {
     background: var(--dark);
@@ -928,66 +928,112 @@ nav.solid {
     background-size: 32px 32px;
 }
 
-.t-grid {
+/* ============================================
+   AVIS CLIENTS
+   ============================================ */
+.review-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    position: relative;
-    z-index: 1;
+    gap: 24px;
 }
 
-.t-c {
-    background: rgba(255, 255, 255, .04);
-    border: 1px solid rgba(255, 255, 255, .07);
-    border-radius: 20px;
-    padding: 32px;
-    transition: all .3s;
-}
-
-.t-c:hover {
-    background: rgba(255, 255, 255, .07);
-    transform: translateY(-3px);
-}
-
-.t-q {
-    font-size: 28px;
-    color: var(--orange);
-    margin-bottom: 14px;
-    opacity: .6;
-}
-
-.t-txt {
-    font-size: 15px;
-    color: rgba(255, 255, 255, .6);
-    line-height: 1.8;
-    margin-bottom: 24px;
-    font-style: italic;
-}
-
-.t-f {
+.review-card {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 24px;
+    padding: 36px 32px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    gap: 14px;
+    transition: all .35s;
 }
 
-.t-a { display: flex; align-items: center; gap: 12px; }
+.review-card:hover {
+    background: rgba(255, 255, 255, .09);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, .15);
+}
 
-.t-av {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--orange), var(--orange-d));
+.review-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 4px;
+}
+
+.review-card h3 {
+    font-size: 18px;
     font-weight: 700;
-    font-size: 15px;
     color: #fff;
 }
 
-.t-n { font-size: 14px; font-weight: 600; color: #fff; }
-.t-r { font-size: 11px; color: rgba(255, 255, 255, .35); }
-.t-s { color: #FCD34D; font-size: 12px; }
+.review-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .45);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.review-stars {
+    color: #FCD34D;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all .3s;
+    margin-top: 4px;
+    width: 100%;
+    justify-content: center;
+}
+
+.review-btn-google {
+    background: #fff;
+    color: #333;
+}
+
+.review-btn-google:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+.review-btn-fb {
+    background: #1877F2;
+    color: #fff;
+}
+
+.review-btn-fb:hover {
+    background: #1464d0;
+    transform: translateY(-2px);
+}
+
+.review-btn-wa {
+    background: #25D366;
+    color: #fff;
+}
+
+.review-btn-wa:hover {
+    background: #1fba59;
+    transform: translateY(-2px);
+}
+
+/* Responsive avis */
+@media (max-width: 768px) {
+    .review-grid { grid-template-columns: 1fr; }
+}
 
 /* ============================================
    CTA
