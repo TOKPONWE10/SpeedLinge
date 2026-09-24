@@ -108,3 +108,36 @@ function updateScrollReveal() {
 
 window.addEventListener('scroll', updateScrollReveal, { passive: true });
 updateScrollReveal();
+
+/* Formulaire de contact.
+   Il n'avait ni action ni gestionnaire, et aucun champ ne portait de name :
+   l'envoi rechargeait la page et le message du visiteur était perdu. Il compose
+   désormais un message WhatsApp, comme le reste des boutons du site. */
+(function () {
+  var form = document.getElementById('ct-form');
+  if (!form) return;
+
+  var NUMERO = '22995050715';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    };
+
+    var lignes = [
+      'Bonjour SpeedLinge,',
+      '',
+      'Nom : ' + v('ct-prenom') + ' ' + v('ct-nom'),
+      v('ct-tel') ? 'Téléphone : ' + v('ct-tel') : '',
+      v('ct-email') ? 'Email : ' + v('ct-email') : '',
+      v('ct-sujet') ? 'Sujet : ' + v('ct-sujet') : '',
+      '',
+      v('ct-message')
+    ].filter(function (l, i) { return l !== '' || i === 1 || i === 6; });
+
+    window.open('https://wa.me/' + NUMERO + '?text=' +
+                encodeURIComponent(lignes.join('\n')), '_blank');
+  });
+})();

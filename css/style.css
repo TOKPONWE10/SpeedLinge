@@ -1503,3 +1503,11 @@ footer h5 {
     .sec { padding: 64px 16px; }
     .cta-left { padding: 52px 28px; }
 }
+
+/* Mention sous le bouton d'envoi du formulaire de contact. */
+.ct-note {
+  margin: 10px 0 0;
+  font-size: .82rem;
+  text-align: center;
+  opacity: .7;
+}

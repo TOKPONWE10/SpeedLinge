@@ -1,0 +1,10 @@
+# Configuration locale de l'éditeur
+.claude/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini

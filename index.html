@@ -89,7 +89,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2026-09-24">
 
     <!-- Preload images critiques -->
     <link rel="preload" as="image" href="img/promo.jpg">
@@ -642,28 +642,28 @@
             <p class="sec-p">Question, devis, réservation — nous répondons vite.</p>
         </div>
         <div class="ct-grid">
-            <form class="ct-form rv">
+            <form class="ct-form rv" id="ct-form">
                 <div class="ct-row">
                     <div class="ff">
-                        <label>Prénom</label>
-                        <input type="text" placeholder="Votre prénom">
+                        <label for="ct-prenom">Prénom</label>
+                        <input type="text" id="ct-prenom" name="prenom" placeholder="Votre prénom" required>
                     </div>
                     <div class="ff">
-                        <label>Nom</label>
-                        <input type="text" placeholder="Votre nom">
+                        <label for="ct-nom">Nom</label>
+                        <input type="text" id="ct-nom" name="nom" placeholder="Votre nom">
                     </div>
                 </div>
                 <div class="ff">
-                    <label>Email</label>
-                    <input type="email" placeholder="votre@email.com">
+                    <label for="ct-email">Email</label>
+                    <input type="email" id="ct-email" name="email" placeholder="votre@email.com">
                 </div>
                 <div class="ff">
-                    <label>Téléphone</label>
-                    <input type="tel" placeholder="+229 XX XX XX XX">
+                    <label for="ct-tel">Téléphone</label>
+                    <input type="tel" id="ct-tel" name="telephone" placeholder="+229 XX XX XX XX">
                 </div>
                 <div class="ff">
-                    <label>Sujet</label>
-                    <select>
+                    <label for="ct-sujet">Sujet</label>
+                    <select id="ct-sujet" name="sujet">
                         <option value="">Sélectionnez</option>
                         <option>Réservation</option>
                         <option>Information</option>
@@ -672,12 +672,13 @@
                     </select>
                 </div>
                 <div class="ff">
-                    <label>Message</label>
-                    <textarea placeholder="Décrivez votre besoin..."></textarea>
+                    <label for="ct-message">Message</label>
+                    <textarea id="ct-message" name="message" placeholder="Décrivez votre besoin..." required></textarea>
                 </div>
                 <button type="submit" class="ct-sub">
-                    <i class="fas fa-paper-plane"></i> Envoyer
+                    <i class="fas fa-paper-plane"></i> Envoyer sur WhatsApp
                 </button>
+                <p class="ct-note">Votre message s'ouvre dans WhatsApp, prêt à être envoyé.</p>
             </form>
 
             <div class="ct-info rv d1">
@@ -801,7 +802,7 @@
 </button>
 
 <!-- Scripts -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2026-09-24"></script>
 
 </body>
 </html>
