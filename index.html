@@ -1,62 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Search Console -->
     <meta name="google-site-verification" content="_C1OxdlCpSGYfPyQY8_dpkYV3t85jUmwIno9KuITbAk">
 
-    <!-- SEO de base -->
-    <title>SpeedLinge — Buanderie Professionnelle à Parakou | Lavage, Repassage, Pressing</title>
-    <meta name="description" content="SpeedLinge, buanderie professionnelle à Parakou (Quartier Arafat). Lavage, séchage, repassage et pressing express en 1h max. Ouvert mar-dim 09h-19h. Appelez le +229 95 05 07 15.">
-    <meta name="keywords" content="buanderie Parakou, lavage linge Parakou, repassage Parakou, pressing Parakou, blanchisserie Bénin, SpeedLinge, laverie Parakou, nettoyage vêtements Parakou">
+    <title>SpeedLinge — Buanderie à Parakou : lavage, repassage et pressing en 1 h</title>
+    <meta name="description" content="SpeedLinge, buanderie à Parakou, quartier Arafat. Lavage, séchage, repassage et pressing, prêts en une heure maximum. Ouvert du mardi au dimanche, de 9 h à 19 h. Tél. +229 01 95 05 07 15.">
     <meta name="author" content="SpeedLinge">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#F8F6F1">
     <link rel="canonical" href="https://speedlinge.netlify.app/">
+    <link rel="icon" href="img/logo.jpg">
 
-    <!-- Open Graph (partage Facebook / WhatsApp) -->
     <meta property="og:type" content="business.business">
-    <meta property="og:title" content="SpeedLinge — Buanderie Professionnelle à Parakou">
-    <meta property="og:description" content="Lavage, séchage, repassage et pressing express en 1h max à Parakou. Service rapide, soigné et accessible. Réservez via WhatsApp.">
-    <meta property="og:image" content="img/banner.jpg">
+    <meta property="og:title" content="SpeedLinge — Buanderie à Parakou">
+    <meta property="og:description" content="Lavage, séchage, repassage et pressing, prêts en une heure maximum. Réservez sur WhatsApp.">
+    <meta property="og:image" content="https://speedlinge.netlify.app/img/banner.jpg">
     <meta property="og:url" content="https://speedlinge.netlify.app/">
     <meta property="og:locale" content="fr_BJ">
     <meta property="og:site_name" content="SpeedLinge">
-    <meta property="business:contact_data:street_address" content="Quartier Arafat, 1ère voie à droite après l'école La Miséricorde">
-    <meta property="business:contact_data:locality" content="Parakou">
-    <meta property="business:contact_data:country_name" content="Bénin">
-    <meta property="business:contact_data:phone_number" content="+22995050715">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SpeedLinge — Buanderie Professionnelle à Parakou">
-    <meta name="twitter:description" content="Lavage, repassage et pressing express en 1h à Parakou. Réservez via WhatsApp.">
-    <meta name="twitter:image" content="img/banner.jpg">
+    <meta name="twitter:title" content="SpeedLinge — Buanderie à Parakou">
+    <meta name="twitter:description" content="Lavage, repassage et pressing en une heure maximum à Parakou. Réservez sur WhatsApp.">
+    <meta name="twitter:image" content="https://speedlinge.netlify.app/img/banner.jpg">
 
-    <!-- Géolocalisation -->
     <meta name="geo.region" content="BJ">
     <meta name="geo.placename" content="Parakou, Bénin">
     <meta name="geo.position" content="9.334529841820128;2.6487189933049846">
     <meta name="ICBM" content="9.334529841820128, 2.6487189933049846">
 
-    <!-- Schema.org JSON-LD (rich results Google) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "DryCleaningOrLaundry",
         "name": "SpeedLinge",
-        "description": "Buanderie professionnelle à Parakou. Lavage, séchage, repassage et pressing express en 1h maximum.",
+        "description": "Buanderie à Parakou. Lavage, séchage, repassage et pressing, prêts en une heure maximum.",
         "url": "https://speedlinge.netlify.app/",
         "logo": "https://speedlinge.netlify.app/img/logo.jpg",
         "image": "https://speedlinge.netlify.app/img/banner.jpg",
-        "telephone": "+22995050715",
-        "priceRange": "100f - 1000f",
+        "telephone": "+2290195050715",
+        "priceRange": "100 FCFA - 1 000 FCFA",
         "currenciesAccepted": "XOF",
-        "paymentAccepted": "Cash, Mobile Money",
+        "paymentAccepted": "Espèces, Mobile Money",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Quartier Arafat, 1ère voie à droite après l'école La Miséricorde",
+            "streetAddress": "Quartier Arafat, 1re voie à droite après l'école La Miséricorde",
             "addressLocality": "Parakou",
             "addressCountry": "BJ"
         },
@@ -81,728 +72,490 @@
     }
     </script>
 
-    <!-- Fonts -->
+    <script>
+        // Les animations d'apparition ne s'activent que si le navigateur sait les jouer :
+        // sans cela, le contenu reste simplement visible.
+        if ('IntersectionObserver' in window && window.innerHeight > 0) {
+            document.documentElement.className = 'js';
+        }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,300..600,0..1;1,9..144,300..600,0..1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=2026-09-24">
-
-    <!-- Preload images critiques -->
-    <link rel="preload" as="image" href="img/promo.jpg">
-    <link rel="preload" as="image" href="img/logo.jpg">
+    <link rel="stylesheet" href="css/style.css?v=2026-10-02">
 </head>
 <body>
 
-<!-- ============================================
-     NAV
-     ============================================ -->
-<nav id="nav">
-    <div class="nav-c">
-        <a href="#top" class="n-logo">
-            <div class="n-logo-ic">
-                <img src="img/logo.jpg" alt="SpeedLinge Logo">
-            </div>
-            <div class="n-logo-t"><b>Speed</b><span>Linge</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.5H7.7V14h2.7v8z"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9a7.3 7.3 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.3-1.5z"/></symbol>
+
+    <!-- Symboles d'entretien, ceux des étiquettes cousues dans les vêtements -->
+    <symbol id="c-lavage" viewBox="0 0 64 64"><path d="M8 20l6 34h36l6-34" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 20c4-5 8-5 12 0s8 5 12 0 8-5 12 0 8 5 12 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="c-sechage" viewBox="0 0 64 64"><rect x="9" y="9" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="c-repassage" viewBox="0 0 64 64"><path d="M8 48l9-18h24c8 0 15 7 15 18z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M21 30v-8h22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26" cy="40" r="1.3" fill="currentColor"/><circle cx="33" cy="40" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="c-pressing" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M27 43V21h6.5a6.5 6.5 0 0 1 0 13H27" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="hd" id="hd">
+    <div class="wrap hd-in">
+        <a href="#top" class="logo" aria-label="SpeedLinge, retour en haut de page">
+            <img src="img/logo-mark.png" alt="" width="80" height="90">
+            <span class="logo-t"><b>Speed</b>Linge</span>
         </a>
-        <ul class="n-links">
-            <li><a href="#top">Accueil</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#tarifs">Tarifs</a></li>
-            <li><a href="#abo">Abonnements</a></li>
-            <li><a href="#avis">Avis</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation."
-                   target="_blank"
-                   class="n-cta">
-                    <i class="fab fa-whatsapp"></i> Reserver
-                </a>
-            </li>
-        </ul>
-        <button class="ham" id="ham"><i class="fas fa-bars"></i></button>
-    </div>
-</nav>
 
-<!-- Overlay + Drawer mobile -->
-<div class="m-overlay" id="m-ov"></div>
-<div class="m-drawer" id="m-dr">
-    <div class="m-drawer-top">
-        <div class="n-logo-t"><b>Speed</b><span>Linge</span></div>
-        <button class="m-x" id="m-x"><i class="fas fa-xmark"></i></button>
-    </div>
-    <a href="#top">Accueil</a>
-    <a href="#services">Services</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#abo">Abonnements</a>
-    <a href="#avis">Avis</a>
-    <a href="#contact">Contact</a>
-    <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation."
-       target="_blank"
-       class="m-cta">
-        <i class="fab fa-whatsapp"></i> Reserver
-    </a>
-</div>
-
-<!-- ============================================
-     HERO
-     ============================================ -->
-<section class="hero" id="top">
-    <div class="hero-left">
-        <div class="hero-tag">
-            <div class="pulse-dot"></div>
-            Service express — 1 heure max
-        </div>
-        <h1>Votre <em>linge propre</em><br>en un clin d'oeil</h1>
-        <p class="hero-p">
-            SpeedLinge, votre buanderie professionnelle à Parakou.
-            Lavage, séchage, repassage et pressing de qualité.
-        </p>
-        <div class="hero-btns">
-            <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation."
-               target="_blank"
-               class="btn btn-o">
-                <i class="fab fa-whatsapp"></i> Réserver
-            </a>
-            <a href="#services" class="btn btn-g">
-                Nos services <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-        <div class="hero-stats">
-            <div class="h-stat">
-                <div class="h-stat-v">1h</div>
-                <div class="h-stat-l">Délai max</div>
-            </div>
-            <div class="h-stat">
-                <div class="h-stat-v">100+</div>
-                <div class="h-stat-l">Clients</div>
-            </div>
-            <div class="h-stat">
-                <div class="h-stat-v">6j/7</div>
-                <div class="h-stat-l">Ouvert</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="hero-right">
-        <div class="hero-img-wrap">
-            <img class="hero-img" src="img/promo.jpg" alt="SpeedLinge - Service professionnel">
-            <div class="hero-img-overlay"></div>
-        </div>
-        <div class="hero-float f1">
-            <div class="hf-ic green"><i class="fas fa-check"></i></div>
-            <div>
-                <div class="hf-t">Qualité garantie</div>
-                <div class="hf-s">Machines Samsung pro</div>
-            </div>
-        </div>
-        <div class="hero-float f2">
-            <div class="hf-ic blue"><i class="fas fa-truck-fast"></i></div>
-            <div>
-                <div class="hf-t">Livraison possible</div>
-                <div class="hf-s">Récupération & livraison</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     SCROLL REVEAL
-     ============================================ -->
-<div class="sr-section" id="sr">
-    <div class="sr-sticky">
-        <div class="sr-frame">
-            <img class="sr-img"
-                 id="sr-img"
-                 src="img/banner.jpg"
-                 alt="SpeedLinge - Service de Lavage et Repassage"
-                 loading="lazy">
-            <div class="sr-over" id="sr-over">
-                <h2>Un service qui change<br>votre quotidien</h2>
-                <p>Machines professionnelles, produits premium, équipe dédiée. Votre linge mérite le meilleur.</p>
-                <div class="sr-badge"><i class="fas fa-stopwatch"></i> 01h maximum</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ============================================
-     MARQUEE
-     ============================================ -->
-<div class="marquee">
-    <div class="mq-track">
-        <div class="mq-item"><span class="d"></span>Lavage</div>
-        <div class="mq-item"><span class="d"></span>Séchage</div>
-        <div class="mq-item"><span class="d"></span>Repassage</div>
-        <div class="mq-item"><span class="d"></span>Pressing</div>
-        <div class="mq-item"><span class="d"></span>Pliage</div>
-        <div class="mq-item"><span class="d"></span>Livraison</div>
-        <div class="mq-item"><span class="d"></span>Express 1h</div>
-        <div class="mq-item"><span class="d"></span>Qualité pro</div>
-        <!-- Duplicate pour boucle infinie -->
-        <div class="mq-item"><span class="d"></span>Lavage</div>
-        <div class="mq-item"><span class="d"></span>Séchage</div>
-        <div class="mq-item"><span class="d"></span>Repassage</div>
-        <div class="mq-item"><span class="d"></span>Pressing</div>
-        <div class="mq-item"><span class="d"></span>Pliage</div>
-        <div class="mq-item"><span class="d"></span>Livraison</div>
-        <div class="mq-item"><span class="d"></span>Express 1h</div>
-        <div class="mq-item"><span class="d"></span>Qualité pro</div>
-    </div>
-</div>
-
-<!-- ============================================
-     SERVICES
-     ============================================ -->
-<section class="sec" id="services">
-    <div class="ctn">
-        <div class="sec-top">
-            <div class="sec-tag">Nos services</div>
-            <h2 class="sec-h">Des prestations <span class="o">professionnelles</span></h2>
-            <p class="sec-p">Chaque vêtement est traité avec soin par notre équipe dédiée.</p>
-        </div>
-        <div class="bento">
-            <!-- Service 01 -->
-            <div class="b-card b1 rv">
-                <div class="b-num">01</div>
-                <div class="b-ic o"><i class="fas fa-shirt"></i></div>
-                <h3>Lavage + Essorage + Pliage</h3>
-                <p>L'offre standard : lavage soigné, essorage délicat, pliage minutieux.</p>
-                <ul class="b-feat">
-                    <li><i class="fas fa-check"></i>Tri couleur & tissu</li>
-                    <li><i class="fas fa-check"></i>Température adaptée</li>
-                    <li><i class="fas fa-check"></i>Pliage organisé</li>
-                </ul>
-                <a href="https://wa.me/22995050715?text=Option%20standard%20SVP"
-                   target="_blank"
-                   class="b-link">
-                    Commander <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <!-- Service 02 -->
-            <div class="b-card b2 rv d1">
-                <div class="b-num">02</div>
-                <div class="b-ic b"><i class="fas fa-wind"></i></div>
-                <h3>Standard + Séchage + Repassage</h3>
-                <p>L'offre complète : séchage machine et repassage vapeur professionnel.</p>
-                <ul class="b-feat">
-                    <li><i class="fas fa-check"></i>Séchage rapide</li>
-                    <li><i class="fas fa-check"></i>Repassage vapeur</li>
-                    <li><i class="fas fa-check"></i>Pliage ou cintres</li>
-                </ul>
-                <a href="https://wa.me/22995050715?text=Option%20complete%20SVP"
-                   target="_blank"
-                   class="b-link">
-                    Commander <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <!-- Service 03 -->
-            <div class="b-card b3 rv d2">
-                <div class="b-num">03</div>
-                <div class="b-ic d"><i class="fas fa-gem"></i></div>
-                <h3>Pressing professionnel</h3>
-                <p>Nettoyage expert pour vêtements délicats, costumes, tenues spéciales.</p>
-                <ul class="b-feat">
-                    <li><i class="fas fa-check"></i>Détachage pro</li>
-                    <li><i class="fas fa-check"></i>Tissus délicats</li>
-                    <li><i class="fas fa-check"></i>Finition premium</li>
-                </ul>
-                <a href="https://wa.me/22995050715?text=Pressing%20SVP"
-                   target="_blank"
-                   class="b-link">
-                    Commander <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     TARIFS
-     ============================================ -->
-<section class="sec bg-s" id="tarifs">
-    <div class="ctn">
-        <div class="sec-top">
-            <div class="sec-tag">Nos tarifs</div>
-            <h2 class="sec-h">Des prix <span class="o">transparents</span></h2>
-            <p class="sec-p">Clairs, compétitifs et sans surprise.</p>
-        </div>
-        <div class="pr-grid">
-            <!-- Lavage -->
-            <div class="pr-c rv">
-                <div class="pr-top">
-                    <div class="pr-ic"><i class="fas fa-shirt"></i></div>
-                    <h3>Lavage</h3>
-                </div>
-                <div class="pr-price">
-                    <div class="pr-v">100<span class="pr-u">f</span></div>
-                    <div class="pr-per">par linge</div>
-                </div>
-                <ul class="pr-list">
-                    <li><i class="fas fa-check"></i>Lavage pro</li>
-                    <li><i class="fas fa-check"></i>Lessive premium</li>
-                    <li><i class="fas fa-check"></i>Essorage + pliage</li>
-                </ul>
-                <div class="pr-btn-w">
-                    <a href="https://wa.me/22995050715?text=Lavage%20SVP"
-                       target="_blank"
-                       class="pr-btn pr-ghost">Choisir</a>
-                </div>
-            </div>
-            <!-- Séchage (populaire) -->
-            <div class="pr-c pop rv d1">
-                <div class="pr-pop">POPULAIRE</div>
-                <div class="pr-top">
-                    <div class="pr-ic" style="background:var(--orange-l);color:var(--orange)">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <h3>Séchage</h3>
-                </div>
-                <div class="pr-price">
-                    <div class="pr-v">500<span class="pr-u">f</span></div>
-                    <div class="pr-per">1 à 25 linges</div>
-                </div>
-                <ul class="pr-list">
-                    <li><i class="fas fa-check"></i>Séchage rapide</li>
-                    <li><i class="fas fa-check"></i>Tous tissus</li>
-                    <li><i class="fas fa-check"></i>Économique</li>
-                </ul>
-                <div class="pr-btn-w">
-                    <a href="https://wa.me/22995050715?text=S%C3%A9chage%20SVP"
-                       target="_blank"
-                       class="pr-btn pr-fill">Choisir</a>
-                </div>
-            </div>
-            <!-- Repassage -->
-            <div class="pr-c rv d2">
-                <div class="pr-top">
-                    <div class="pr-ic"><i class="fas fa-temperature-high"></i></div>
-                    <h3>Repassage</h3>
-                </div>
-                <div class="pr-price">
-                    <div class="pr-v">200<span class="pr-u">f</span></div>
-                    <div class="pr-per">par linge</div>
-                </div>
-                <ul class="pr-list">
-                    <li><i class="fas fa-check"></i>Repassage pro</li>
-                    <li><i class="fas fa-check"></i>Finition nette</li>
-                    <li><i class="fas fa-check"></i>Plis précis</li>
-                </ul>
-                <div class="pr-btn-w">
-                    <a href="https://wa.me/22995050715?text=Repassage%20SVP"
-                       target="_blank"
-                       class="pr-btn pr-ghost">Choisir</a>
-                </div>
-            </div>
-            <!-- Pressing -->
-            <div class="pr-c rv d3">
-                <div class="pr-top">
-                    <div class="pr-ic" style="background:var(--g2);color:var(--navy)">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Pressing</h3>
-                </div>
-                <div class="pr-price">
-                    <div class="pr-v">1000<span class="pr-u">f</span></div>
-                    <div class="pr-per">par tenue</div>
-                </div>
-                <ul class="pr-list">
-                    <li><i class="fas fa-check"></i>Nettoyage expert</li>
-                    <li><i class="fas fa-check"></i>Repassage inclus</li>
-                    <li><i class="fas fa-check"></i>Prêt en 24h</li>
-                </ul>
-                <div class="pr-btn-w">
-                    <a href="https://wa.me/22995050715?text=Pressing%20SVP"
-                       target="_blank"
-                       class="pr-btn pr-ghost">Choisir</a>
-                </div>
-            </div>
-        </div>
-        <p class="pr-note">25 linges = 2 500f &bull; Dégressif en volume</p>
-    </div>
-</section>
-
-<!-- ============================================
-     ABONNEMENTS
-     ============================================ -->
-<section class="sec" id="abo">
-    <div class="ctn">
-        <div class="sec-top">
-            <div class="sec-tag">Abonnements</div>
-            <h2 class="sec-h">Offres <span class="o">avantageuses</span></h2>
-            <p class="sec-p">Économisez chaque mois avec nos formules.</p>
-        </div>
-        <div class="abo-g">
-            <!-- Standard -->
-            <div class="abo-c rv">
-                <div class="abo-h">
-                    <div class="abo-ic ab"><i class="fas fa-shirt"></i></div>
-                    <div>
-                        <h3>Standard</h3>
-                        <span>Lavage + Essorage + Pliage</span>
-                    </div>
-                </div>
-                <div class="abo-b">
-                    <div class="abo-r">
-                        <span class="abo-l">100 linges</span>
-                        <div><span class="abo-v">9 000f</span><span class="abo-old">10 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">150 linges</span>
-                        <div><span class="abo-v">14 000f</span><span class="abo-old">15 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">200 linges</span>
-                        <div><span class="abo-v">19 000f</span><span class="abo-old">20 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">Drap / pull / serviette</span>
-                        <div><span class="abo-v">150f</span></div>
-                    </div>
-                    <a href="https://wa.me/22995050715?text=Abo%20Standard"
-                       target="_blank"
-                       class="abo-btn">Souscrire</a>
-                </div>
-            </div>
-            <!-- Complète -->
-            <div class="abo-c rv d1">
-                <div class="abo-h">
-                    <div class="abo-ic ao"><i class="fas fa-star"></i></div>
-                    <div>
-                        <h3>Complète</h3>
-                        <span>Lavage + Séchage + Pliage</span>
-                    </div>
-                </div>
-                <div class="abo-b">
-                    <div class="abo-r">
-                        <span class="abo-l">100 linges</span>
-                        <div><span class="abo-v">10 000f</span><span class="abo-old">12 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">150 linges</span>
-                        <div><span class="abo-v">15 000f</span><span class="abo-old">18 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">200 linges</span>
-                        <div><span class="abo-v">20 000f</span><span class="abo-old">24 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">Drap / pull / serviette</span>
-                        <div><span class="abo-v">150f</span></div>
-                    </div>
-                    <a href="https://wa.me/22995050715?text=Abo%20Complet"
-                       target="_blank"
-                       class="abo-btn">Souscrire</a>
-                </div>
-            </div>
-            <!-- Pro -->
-            <div class="abo-c rv d2">
-                <div class="abo-h">
-                    <div class="abo-ic ad"><i class="fas fa-gem"></i></div>
-                    <div>
-                        <h3>Pro</h3>
-                        <span>Repassage professionnel</span>
-                    </div>
-                </div>
-                <div class="abo-b">
-                    <div class="abo-r">
-                        <span class="abo-l">10 linges</span>
-                        <div><span class="abo-v">1 500f</span><span class="abo-old">2 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">25 linges</span>
-                        <div><span class="abo-v">4 000f</span><span class="abo-old">5 000f</span></div>
-                    </div>
-                    <div class="abo-r">
-                        <span class="abo-l">50 linges</span>
-                        <div><span class="abo-v">7 500f</span><span class="abo-old">10 000f</span></div>
-                    </div>
-                    <a href="https://wa.me/22995050715?text=Abo%20Pro"
-                       target="_blank"
-                       class="abo-btn">Souscrire</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     AVIS CLIENTS
-     ============================================ -->
-<section class="sec testi" id="avis">
-    <div class="testi-pat"></div>
-    <div class="ctn">
-        <div class="sec-top">
-            <div class="sec-tag" style="color:var(--orange)">Avis clients</div>
-            <h2 class="sec-h" style="color:#fff">Votre avis <span class="o">compte</span></h2>
-            <p class="sec-p" style="color:rgba(255,255,255,.5)">
-                Vous avez utilisé nos services ? Partagez votre expérience et aidez d'autres clients à nous découvrir.
-            </p>
-        </div>
-        <div class="review-grid rv">
-            <!-- Carte Google -->
-            <div class="review-card">
-                <div class="review-icon" style="background:#fff1f0">
-                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M43.6 20.1H24v7.6h11.2c-1.1 5.4-5.8 9.3-11.2 9.3-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 2.9l5.7-5.7C33.9 6.7 29.2 4.8 24 4.8 13.4 4.8 4.8 13.4 4.8 24S13.4 43.2 24 43.2c11 0 20-8 20-19.2 0-1-.1-2-.4-3.9z" fill="#FFC107"/>
-                        <path d="M6.3 14.7l6.6 4.8C14.5 15.5 18.9 12 24 12c3 0 5.7 1.1 7.8 2.9l5.7-5.7C33.9 6.7 29.2 4.8 24 4.8c-7.5 0-14 4.3-17.7 9.9z" fill="#FF3D00"/>
-                        <path d="M24 43.2c5.1 0 9.7-1.8 13.2-4.8l-6.1-5.1c-2 1.4-4.5 2.2-7.1 2.2-5.3 0-9.9-3.8-11.1-9H6.7C10.2 38.7 16.6 43.2 24 43.2z" fill="#4CAF50"/>
-                        <path d="M43.6 20.1H24v7.6h11.2c-.5 2.6-2 4.9-4.1 6.4l6.1 5.1c3.6-3.3 5.8-8.3 5.8-14.1 0-1-.1-2-.4-3.9-.1-.4-.1-.7 0-1.1z" fill="#1976D2"/>
-                    </svg>
-                </div>
-                <h3>Laisser un avis Google</h3>
-                <p>Votre avis sur Google aide d'autres clients à nous trouver et à nous faire confiance.</p>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846"
-                   target="_blank"
-                   class="review-btn review-btn-google">
-                    <i class="fas fa-external-link-alt"></i> Donner mon avis sur Google
-                </a>
-            </div>
-
-            <!-- Carte Facebook -->
-            <div class="review-card">
-                <div class="review-icon" style="background:#e7f0fd">
-                    <i class="fab fa-facebook-f" style="font-size:26px;color:#1877F2"></i>
-                </div>
-                <h3>Recommander sur Facebook</h3>
-                <p>Partagez votre expérience sur notre page Facebook et recommandez SpeedLinge à vos proches.</p>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="https://www.facebook.com/share/p/16MGniivCP/"
-                   target="_blank"
-                   class="review-btn review-btn-fb">
-                    <i class="fab fa-facebook-f"></i> Recommander sur Facebook
-                </a>
-            </div>
-
-            <!-- Carte WhatsApp -->
-            <div class="review-card">
-                <div class="review-icon" style="background:#e6f9ee">
-                    <i class="fab fa-whatsapp" style="font-size:28px;color:#25D366"></i>
-                </div>
-                <h3>Partager par WhatsApp</h3>
-                <p>Vous êtes satisfait ? Partagez le lien de notre site à votre entourage via WhatsApp.</p>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <a href="https://wa.me/?text=Je%20vous%20recommande%20SpeedLinge%2C%20buanderie%20professionnelle%20%C3%A0%20Parakou%20%F0%9F%91%8D%20%3A%20https%3A%2F%2Fspeedlinge.netlify.app%2F"
-                   target="_blank"
-                   class="review-btn review-btn-wa">
-                    <i class="fab fa-whatsapp"></i> Partager via WhatsApp
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     CTA
-     ============================================ -->
-<section class="cta">
-    <div class="cta-inner">
-        <div class="cta-left">
-            <h2>Prêt à libérer<br>du temps ?</h2>
-            <p>Réservez en un clic. Nous nous occupons de votre linge avec le plus grand soin.</p>
-            <a href="https://wa.me/22995050715?text=Bonjour%20SpeedLinge%2C%20reservation."
-               target="_blank"
-               class="btn-w">
-                <i class="fab fa-whatsapp"></i> Réserver sur WhatsApp
-            </a>
-        </div>
-        <div class="cta-right">
-            <div class="cta-circle">
-                <div class="big">1h</div>
-                <div class="sub">maximum</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     CONTACT
-     ============================================ -->
-<section class="sec" id="contact">
-    <div class="ctn">
-        <div class="sec-top">
-            <div class="sec-tag">Contact</div>
-            <h2 class="sec-h">Parlons de votre <span class="o">linge</span></h2>
-            <p class="sec-p">Question, devis, réservation — nous répondons vite.</p>
-        </div>
-        <div class="ct-grid">
-            <form class="ct-form rv" id="ct-form">
-                <div class="ct-row">
-                    <div class="ff">
-                        <label for="ct-prenom">Prénom</label>
-                        <input type="text" id="ct-prenom" name="prenom" placeholder="Votre prénom" required>
-                    </div>
-                    <div class="ff">
-                        <label for="ct-nom">Nom</label>
-                        <input type="text" id="ct-nom" name="nom" placeholder="Votre nom">
-                    </div>
-                </div>
-                <div class="ff">
-                    <label for="ct-email">Email</label>
-                    <input type="email" id="ct-email" name="email" placeholder="votre@email.com">
-                </div>
-                <div class="ff">
-                    <label for="ct-tel">Téléphone</label>
-                    <input type="tel" id="ct-tel" name="telephone" placeholder="+229 XX XX XX XX">
-                </div>
-                <div class="ff">
-                    <label for="ct-sujet">Sujet</label>
-                    <select id="ct-sujet" name="sujet">
-                        <option value="">Sélectionnez</option>
-                        <option>Réservation</option>
-                        <option>Information</option>
-                        <option>Devis</option>
-                        <option>Autre</option>
-                    </select>
-                </div>
-                <div class="ff">
-                    <label for="ct-message">Message</label>
-                    <textarea id="ct-message" name="message" placeholder="Décrivez votre besoin..." required></textarea>
-                </div>
-                <button type="submit" class="ct-sub">
-                    <i class="fas fa-paper-plane"></i> Envoyer sur WhatsApp
-                </button>
-                <p class="ct-note">Votre message s'ouvre dans WhatsApp, prêt à être envoyé.</p>
-            </form>
-
-            <div class="ct-info rv d1">
-                <div class="ci">
-                    <div class="ci-ic o"><i class="fas fa-location-dot"></i></div>
-                    <div>
-                        <h4>Adresse</h4>
-                        <p>Parakou, Quartier Arafat<br>1ère voie à droite après l'école La Miséricorde</p>
-                    </div>
-                </div>
-                <div class="ci">
-                    <div class="ci-ic b"><i class="fas fa-phone"></i></div>
-                    <div>
-                        <h4>Téléphone / WhatsApp</h4>
-                        <p>+229 95 05 07 15</p>
-                    </div>
-                </div>
-                <div class="ci">
-                    <div class="ci-ic b"><i class="fas fa-clock"></i></div>
-                    <div>
-                        <h4>Horaires</h4>
-                        <p>Mardi - Dimanche : 09h - 19h<br>Fermé le lundi</p>
-                    </div>
-                </div>
-                <div class="soc-w">
-                    <h4>Suivez-nous</h4>
-                    <div class="socs">
-                        <a href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" class="sc fb">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@speedlinge" target="_blank" class="sc tt">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://wa.me/22995050715" target="_blank" class="sc wa">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     CARTE
-     ============================================ -->
-<div class="map">
-    <iframe src="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846&z=17&output=embed"
-            allowfullscreen=""
-            loading="lazy">
-    </iframe>
-</div>
-
-<!-- ============================================
-     FOOTER
-     ============================================ -->
-<footer>
-    <div class="ft-grid">
-        <div class="ft-about">
-            <div class="n-logo">
-                <div class="n-logo-ic">
-                    <img src="img/logo.jpg" alt="SpeedLinge Logo">
-                </div>
-                <div class="n-logo-t"><b>Speed</b><span>Linge</span></div>
-            </div>
-            <p>Buanderie professionnelle à Parakou. Service rapide, soigné et accessible.</p>
-            <div class="socs">
-                <a href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" class="sc fb">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.tiktok.com/@speedlinge" target="_blank" class="sc tt">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://wa.me/22995050715" target="_blank" class="sc wa">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
-        <div class="ft-links">
-            <h5>Navigation</h5>
-            <a href="#top">Accueil</a>
-            <a href="#services">Services</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="#services">Formules</a>
             <a href="#tarifs">Tarifs</a>
             <a href="#abo">Abonnements</a>
+            <a href="#deroule">Comment ça marche</a>
             <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-ink btn-sm hd-cta" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+           data-wa="Bonjour SpeedLinge, je souhaite réserver.">
+            <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Réserver
+        </a>
+
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+            <span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+    <nav aria-label="Navigation mobile">
+        <a href="#services">Formules</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#abo">Abonnements</a>
+        <a href="#deroule">Comment ça marche</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-ft">
+        <a class="btn btn-wa" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+           data-wa="Bonjour SpeedLinge, je souhaite réserver.">
+            <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Réserver sur WhatsApp
+        </a>
+        <a class="menu-tel" href="tel:+2290195050715">+229 01 95 05 07 15</a>
+    </div>
+</div>
+
+<main id="contenu">
+
+<section class="hero" id="top">
+    <div class="wrap hero-g">
+        <div class="hero-tx">
+            <p class="status in" id="status" style="--i:0">
+                <i aria-hidden="true"></i><span>Mardi au dimanche, 9 h – 19 h</span>
+            </p>
+            <h1 class="in" style="--i:1">Votre linge propre <em>en un clin d'œil.</em></h1>
+            <p class="lead in" style="--i:2">
+                Lavage, séchage, repassage et pressing à Parakou, quartier Arafat.
+                Vous déposez votre linge, il est prêt en une heure maximum.
+            </p>
+            <div class="hero-cta in" style="--i:3">
+                <a class="btn btn-wa" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je souhaite réserver.">
+                    <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Réserver sur WhatsApp
+                </a>
+                <a class="lk" href="#tarifs">Voir les tarifs <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+            <dl class="facts in" style="--i:4">
+                <div><dt>1 h</dt><dd>délai maximum</dd></div>
+                <div><dt>6 j / 7</dt><dd>du mardi au dimanche</dd></div>
+                <div><dt>100 <small>FCFA</small></dt><dd>le linge lavé et plié</dd></div>
+            </dl>
         </div>
-        <div class="ft-links">
-            <h5>Services</h5>
-            <a href="#services">Lavage & Pliage</a>
-            <a href="#services">Séchage</a>
-            <a href="#services">Repassage</a>
-            <a href="#services">Pressing</a>
-        </div>
-        <div class="ft-ct">
-            <h5>Contact</h5>
-            <p><i class="fas fa-location-dot"></i>Parakou, Quartier Arafat</p>
-            <p><i class="fas fa-phone"></i>+229 95 05 07 15</p>
-            <p><i class="fas fa-clock"></i>Mar - Dim : 09h - 19h</p>
+
+        <div class="hero-v in" style="--i:2">
+            <div class="hero-ph">
+                <img src="https://images.unsplash.com/photo-1561053720-76cd73ff22c3?auto=format&fit=crop&w=900&h=1125&q=75"
+                     srcset="https://images.unsplash.com/photo-1561053720-76cd73ff22c3?auto=format&fit=crop&w=600&h=750&q=70 600w,
+                             https://images.unsplash.com/photo-1561053720-76cd73ff22c3?auto=format&fit=crop&w=900&h=1125&q=75 900w,
+                             https://images.unsplash.com/photo-1561053720-76cd73ff22c3?auto=format&fit=crop&w=1200&h=1500&q=75 1200w"
+                     sizes="(min-width: 960px) 40vw, 90vw"
+                     width="900" height="1125" fetchpriority="high"
+                     alt="Chemises bleues et blanches repassées, suspendues sur des cintres">
+            </div>
+
+            <div class="ticket" aria-label="Exemple de commande">
+                <div class="ticket-in">
+                    <p class="ticket-hd"><span>SpeedLinge</span><span>Exemple</span></p>
+                    <p class="ticket-row"><span>Dépôt</span><b>9 h 00</b></p>
+                    <p class="ticket-row"><span>Prêt avant</span><b>10 h 00</b></p>
+                    <p class="ticket-ds">25 linges lavés, essorés et pliés</p>
+                    <p class="ticket-row ticket-tot"><span>Total</span><b>2 500 FCFA</b></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="ft-bot">
-        <p>&copy; 2024 SpeedLinge — Réalisé par
-            <a href="https://tokponwe10.github.io/uptech-agency/" target="_blank">UpTech Agency</a>
-        </p>
-        <div class="ft-leg">
-            <a href="mentions-legales.html">Mentions légales</a>
-            <a href="mentions-legales.html">Confidentialité</a>
-            <a href="mentions-legales.html">CGV</a>
+</section>
+
+<div class="mq" aria-hidden="true">
+    <div class="mq-t">
+        <span>Lavage</span><span>Essorage</span><span>Pliage</span><span>Séchage</span><span>Repassage</span><span>Pressing</span><span>Livraison possible</span>
+        <span>Lavage</span><span>Essorage</span><span>Pliage</span><span>Séchage</span><span>Repassage</span><span>Pressing</span><span>Livraison possible</span>
+    </div>
+</div>
+
+<section class="sec" id="services">
+    <div class="wrap">
+        <header class="sec-hd rv">
+            <p class="eyebrow">Les formules</p>
+            <h2>Quatre façons de nous confier <em>votre linge.</em></h2>
+            <p class="sec-p">De la simple lessive au pressing, vous choisissez jusqu'où nous allons.</p>
+        </header>
+
+        <div class="forms" tabindex="0" role="region" aria-label="Les quatre formules">
+            <article class="form-c rv">
+                <div class="form-p">
+                    <svg class="care" aria-hidden="true"><use href="#c-lavage"/></svg>
+                    <span class="form-n">N° 01</span>
+                    <span class="form-tag">L'offre standard</span>
+                    <h3>Lavage, essorage et pliage</h3>
+                </div>
+                <p>Votre linge est lavé, essoré puis plié. C'est la base de toutes nos formules.</p>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je voudrais l'offre standard : lavage, essorage et pliage.">Commander <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="form-c rv" style="--d:.07s">
+                <div class="form-p">
+                    <svg class="care" aria-hidden="true"><use href="#c-sechage"/></svg>
+                    <span class="form-n">N° 02</span>
+                    <h3>Standard et séchage</h3>
+                </div>
+                <p>L'offre standard, avec le séchage en machine : le linge repart sec, prêt à ranger.</p>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je voudrais l'offre standard avec séchage.">Commander <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="form-c rv" style="--d:.14s">
+                <div class="form-p">
+                    <svg class="care" aria-hidden="true"><use href="#c-repassage"/></svg>
+                    <span class="form-n">N° 03</span>
+                    <h3>Standard, séchage et repassage</h3>
+                </div>
+                <p>Lavé, séché puis repassé : le linge repart prêt à porter.</p>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je voudrais l'offre standard avec séchage et repassage.">Commander <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="form-c rv" style="--d:.21s">
+                <div class="form-p">
+                    <svg class="care" aria-hidden="true"><use href="#c-pressing"/></svg>
+                    <span class="form-n">N° 04</span>
+                    <h3>Pressing</h3>
+                </div>
+                <p>Le pressing complet, pour les vêtements qui demandent plus d'attention.</p>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je voudrais un pressing.">Commander <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+        </div>
+        <p class="swipe" aria-hidden="true">Faites glisser <svg class="ic"><use href="#i-arrow"/></svg></p>
+    </div>
+</section>
+
+<section class="sec sec-white" id="tarifs">
+    <div class="wrap tarifs-g">
+        <div class="tarifs-l">
+            <header class="sec-hd rv">
+                <p class="eyebrow">Les tarifs</p>
+                <h2>Des prix affichés, <em>sans surprise.</em></h2>
+                <p class="sec-p">Paiement en espèces ou par Mobile Money. La livraison est possible, à la charge du client.</p>
+            </header>
+            <figure class="tarifs-ph rv">
+                <img src="https://images.unsplash.com/photo-1602810316693-3667c854239a?auto=format&fit=crop&w=900&h=640&q=75"
+                     width="900" height="640" loading="lazy"
+                     alt="Trois chemises pliées : une blanche, une bleu ciel et une bleu marine">
+            </figure>
+        </div>
+
+        <div class="prices">
+            <div class="price rv">
+                <div>
+                    <h3>Lavage, essorage et pliage</h3>
+                    <p>25 linges, soit 100 FCFA le linge</p>
+                </div>
+                <p class="amt">2 500 <span>FCFA</span></p>
+            </div>
+            <div class="price rv">
+                <div>
+                    <h3>Séchage</h3>
+                    <p>De 1 à 25 linges</p>
+                </div>
+                <p class="amt"><small>à partir de</small>500 <span>FCFA</span></p>
+            </div>
+            <div class="price rv">
+                <div>
+                    <h3>Repassage</h3>
+                    <p>Par linge</p>
+                </div>
+                <p class="amt"><small>à partir de</small>200 <span>FCFA</span></p>
+            </div>
+            <div class="price rv">
+                <div>
+                    <h3>Pressing complet</h3>
+                </div>
+                <p class="amt">1 000 <span>FCFA</span></p>
+            </div>
+            <a class="btn btn-ink rv" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+               data-wa="Bonjour SpeedLinge, j'aimerais connaître le prix pour mon linge.">
+                <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Demander un prix
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="sec" id="abo">
+    <div class="wrap">
+        <header class="sec-hd rv">
+            <p class="eyebrow">Les abonnements</p>
+            <h2>Plus vous confiez de linge, <em>moins il coûte.</em></h2>
+            <p class="sec-p">Trois options, selon ce que vous nous laissez faire. Les prix sont en francs CFA.</p>
+        </header>
+
+        <div class="plans">
+            <article class="plan rv">
+                <p class="plan-k">Option</p>
+                <h3>Standard</h3>
+                <p class="plan-d">Linges lavés et pliés</p>
+                <ul>
+                    <li><span>100 linges</span><span><b>9 000</b><s>10 000</s></span></li>
+                    <li><span>150 linges</span><span><b>14 000</b><s>15 000</s></span></li>
+                    <li><span>200 linges</span><span><b>19 000</b><s>20 000</s></span></li>
+                    <li><span>Drap, pull ou serviette</span><span><b>150</b></span></li>
+                </ul>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je souhaite souscrire à l'abonnement Standard.">Souscrire <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="plan rv" style="--d:.08s">
+                <p class="plan-k">Option</p>
+                <h3>Complète</h3>
+                <p class="plan-d">Linges lavés, séchés et pliés</p>
+                <ul>
+                    <li><span>100 linges</span><span><b>10 000</b><s>12 000</s></span></li>
+                    <li><span>150 linges</span><span><b>15 000</b><s>18 000</s></span></li>
+                    <li><span>200 linges</span><span><b>20 000</b><s>24 000</s></span></li>
+                    <li><span>Drap, pull ou serviette</span><span><b>150</b></span></li>
+                </ul>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je souhaite souscrire à l'abonnement Complet.">Souscrire <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="plan rv" style="--d:.16s">
+                <p class="plan-k">Option</p>
+                <h3>Pro</h3>
+                <p class="plan-d">Repassage</p>
+                <ul>
+                    <li><span>10 linges</span><span><b>1 500</b><s>2 000</s></span></li>
+                    <li><span>25 linges</span><span><b>4 000</b><s>5 000</s></span></li>
+                    <li><span>50 linges</span><span><b>7 500</b><s>10 000</s></span></li>
+                </ul>
+                <a class="lk" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+                   data-wa="Bonjour SpeedLinge, je souhaite souscrire à l'abonnement Pro (repassage).">Souscrire <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="sec how" id="deroule">
+    <div class="wrap how-g">
+        <figure class="how-ph rv">
+            <img src="https://images.unsplash.com/photo-1633680889715-2c9752bf0840?auto=format&fit=crop&w=900&h=1100&q=75"
+                 width="900" height="1100" loading="lazy"
+                 alt="Fer à repasser posé sur un tissu bleu">
+        </figure>
+
+        <div>
+            <header class="sec-hd rv">
+                <p class="eyebrow">Comment ça marche</p>
+                <h2>Une heure, <em>pas davantage.</em></h2>
+            </header>
+
+            <ol class="steps">
+                <li class="rv">
+                    <span class="step-n" aria-hidden="true">1</span>
+                    <div>
+                        <h3>Vous déposez votre linge</h3>
+                        <p>À la buanderie, quartier Arafat, du mardi au dimanche entre 9 h et 19 h. Prévenez-nous sur WhatsApp si vous voulez gagner du temps.</p>
+                    </div>
+                </li>
+                <li class="rv">
+                    <span class="step-n" aria-hidden="true">2</span>
+                    <div>
+                        <h3>Nous nous en occupons</h3>
+                        <p>Lavage, séchage, repassage ou pressing, selon la formule que vous avez choisie.</p>
+                    </div>
+                </li>
+                <li class="rv">
+                    <span class="step-n" aria-hidden="true">3</span>
+                    <div>
+                        <h3>Vous le récupérez</h3>
+                        <p>En une heure maximum. Nous pouvons aussi passer le prendre et vous le rapporter : la livraison est à la charge du client.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="sec sec-white avis" id="avis">
+    <div class="wrap avis-in rv">
+        <p class="eyebrow">Déjà client ?</p>
+        <h2>Si le résultat vous a plu, <em>dites-le autour de vous.</em></h2>
+        <div class="avis-lk">
+            <a class="lk" href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" rel="noopener">
+                <svg class="ic" aria-hidden="true"><use href="#i-fb"/></svg> Nous recommander sur Facebook
+            </a>
+            <a class="lk" href="https://wa.me/?text=Je%20vous%20recommande%20SpeedLinge%2C%20buanderie%20%C3%A0%20Parakou%20%3A%20https%3A%2F%2Fspeedlinge.netlify.app%2F" target="_blank" rel="noopener">
+                <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Partager le site sur WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="sec" id="contact">
+    <div class="wrap contact-g">
+        <div>
+            <header class="sec-hd rv">
+                <p class="eyebrow">Contact</p>
+                <h2>Passez nous voir, <em>ou écrivez-nous.</em></h2>
+            </header>
+
+            <dl class="infos rv">
+                <div>
+                    <dt>Adresse</dt>
+                    <dd>Parakou, quartier Arafat<br>1<sup>re</sup> voie à droite après l'école La Miséricorde</dd>
+                    <dd><a class="lk" href="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846" target="_blank" rel="noopener">Ouvrir l'itinéraire <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></dd>
+                </div>
+                <div>
+                    <dt>Téléphone et WhatsApp</dt>
+                    <dd><a class="tel" href="tel:+2290195050715">+229 01 95 05 07 15</a></dd>
+                </div>
+                <div>
+                    <dt>Horaires</dt>
+                    <dd>Du mardi au dimanche, de 9 h à 19 h<br>Fermé le lundi</dd>
+                </div>
+                <div>
+                    <dt>Réseaux</dt>
+                    <dd class="socs">
+                        <a href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" rel="noopener" aria-label="SpeedLinge sur Facebook"><svg class="ic" aria-hidden="true"><use href="#i-fb"/></svg></a>
+                        <a href="https://www.tiktok.com/@speedlinge" target="_blank" rel="noopener" aria-label="SpeedLinge sur TikTok"><svg class="ic" aria-hidden="true"><use href="#i-tt"/></svg></a>
+                        <a href="https://wa.me/22995050715" target="_blank" rel="noopener" aria-label="SpeedLinge sur WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></a>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+
+        <form class="form rv" id="ct-form" novalidate>
+            <p class="form-t">Un message, une réservation</p>
+            <div class="form-2">
+                <div class="ff">
+                    <label for="ct-prenom">Prénom</label>
+                    <input type="text" id="ct-prenom" name="prenom" autocomplete="given-name" required>
+                </div>
+                <div class="ff">
+                    <label for="ct-nom">Nom</label>
+                    <input type="text" id="ct-nom" name="nom" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="ff">
+                <label for="ct-tel">Téléphone</label>
+                <input type="tel" id="ct-tel" name="telephone" autocomplete="tel" placeholder="01 XX XX XX XX">
+            </div>
+            <div class="ff">
+                <label for="ct-sujet">Sujet</label>
+                <select id="ct-sujet" name="sujet">
+                    <option value="">Choisir</option>
+                    <option>Réservation</option>
+                    <option>Abonnement</option>
+                    <option>Demande de prix</option>
+                    <option>Autre</option>
+                </select>
+            </div>
+            <div class="ff">
+                <label for="ct-message">Message</label>
+                <textarea id="ct-message" name="message" rows="4" required></textarea>
+            </div>
+            <p class="form-err" id="ct-err" role="alert" hidden>Indiquez au moins votre prénom et votre message.</p>
+            <button type="submit" class="btn btn-wa">
+                <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Envoyer sur WhatsApp
+            </button>
+            <p class="form-note">Votre message s'ouvre dans WhatsApp, prêt à être envoyé. Rien n'est enregistré sur ce site.</p>
+        </form>
+    </div>
+
+    <div class="wrap">
+        <div class="map rv">
+            <iframe src="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846&z=17&output=embed"
+                    title="SpeedLinge sur la carte, quartier Arafat à Parakou"
+                    loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="ft">
+    <div class="wrap">
+        <div class="ft-top">
+            <p class="ft-big">Votre linge propre <em>en un clin d'œil.</em></p>
+            <a class="btn btn-wa" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+               data-wa="Bonjour SpeedLinge, je souhaite réserver.">
+                <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Réserver sur WhatsApp
+            </a>
+        </div>
+
+        <div class="ft-g">
+            <div>
+                <a href="#top" class="logo logo-ft" aria-label="SpeedLinge, retour en haut de page">
+                    <span class="logo-chip"><img src="img/logo-mark.png" alt="" width="80" height="90" loading="lazy"></span>
+                    <span class="logo-t"><b>Speed</b>Linge</span>
+                </a>
+                <p class="ft-p">Buanderie à Parakou, quartier Arafat.</p>
+            </div>
+            <nav aria-label="Pied de page">
+                <p class="ft-k">Le site</p>
+                <a href="#services">Formules</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="#abo">Abonnements</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div>
+                <p class="ft-k">Nous trouver</p>
+                <p>1<sup>re</sup> voie à droite après l'école La Miséricorde</p>
+                <p>Mardi au dimanche, 9 h – 19 h</p>
+                <p><a href="tel:+2290195050715">+229 01 95 05 07 15</a></p>
+            </div>
+            <div>
+                <p class="ft-k">Suivre</p>
+                <a href="https://www.facebook.com/share/p/16MGniivCP/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.tiktok.com/@speedlinge" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <div class="ft-bot">
+            <p>&copy; 2026 SpeedLinge. Réalisé par <a href="https://tokponwe10.github.io/uptech-agency/" target="_blank" rel="noopener">UpTech</a>. Photographies d'illustration.</p>
+            <p><a href="mentions-legales.html">Mentions légales et confidentialité</a></p>
         </div>
     </div>
 </footer>
 
-<!-- Bouton WhatsApp flottant -->
-<a href="https://wa.me/22995050715" target="_blank" class="waf">
-    <i class="fab fa-whatsapp"></i>
+<a class="waf" id="waf" href="https://wa.me/22995050715" target="_blank" rel="noopener"
+   data-wa="Bonjour SpeedLinge, je souhaite réserver." aria-label="Écrire à SpeedLinge sur WhatsApp">
+    <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
 </a>
 
-<!-- Bouton retour en haut -->
-<button class="btt" id="btt">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- Scripts -->
-<script src="js/main.js?v=2026-09-24"></script>
-
+<script src="js/main.js?v=2026-10-02"></script>
 </body>
 </html>
