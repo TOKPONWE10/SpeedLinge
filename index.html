@@ -85,7 +85,7 @@
     <link rel="preconnect" href="https://images.unsplash.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,300..600,0..1;1,9..144,300..600,0..1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=2026-10-04b">
+    <link rel="stylesheet" href="css/style.css?v=2026-10-04c">
 </head>
 <body>
 
@@ -545,10 +545,16 @@
             <img src="img/devanture.webp" width="1280" height="853" loading="lazy"
                  alt="Devanture de SpeedLinge, blanchisserie et pressing, avec son enseigne bleue">
         </figure>
-        <div class="map rv">
-            <iframe src="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846&z=17&output=embed"
-                    title="SpeedLinge sur la carte, quartier Arafat à Parakou"
-                    loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map rv" id="map">
+            <!-- La carte Google dépose des cookies : elle ne se charge qu'après accord du visiteur. -->
+            <iframe data-src="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846&z=17&output=embed"
+                    title="SpeedLinge sur la carte, quartier Arafat à Parakou" hidden
+                    allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-off">
+                <p>La carte est fournie par Google Maps, qui dépose des cookies.</p>
+                <button type="button" class="btn btn-ink btn-sm" data-cookies="ok">Afficher la carte</button>
+                <a class="lk" href="https://www.google.com/maps?q=9.334529841820128,2.6487189933049846" target="_blank" rel="noopener">Ou l'ouvrir dans Google Maps <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
         </div>
     </div>
 </section>
@@ -595,8 +601,8 @@
         </div>
 
         <div class="ft-bot">
-            <p>&copy; 2026 SpeedLinge. Réalisé par <a href="https://tokponwe10.github.io/uptech-agency/" target="_blank" rel="noopener">UpTech</a>. Photographies d'illustration, sauf la boutique et la devanture.</p>
-            <p><a href="mentions-legales.html">Mentions légales et confidentialité</a></p>
+            <p>&copy; 2026 SpeedLinge. Réalisé par <a href="https://tokponwe10.github.io/uptech-agency/" target="_blank" rel="noopener">UpTech</a>.</p>
+            <p><a href="mentions-legales.html">Mentions légales et confidentialité</a> · <button type="button" class="ft-lk" data-cookies="gerer">Gérer les cookies</button></p>
         </div>
     </div>
 </footer>
@@ -606,6 +612,15 @@
     <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
 </a>
 
-<script src="js/main.js?v=2026-10-04b"></script>
+<div class="ck" id="ck" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+    <p class="ck-t">Ce site respecte votre vie privée</p>
+    <p class="ck-p">Nous n'utilisons ni publicité ni mesure d'audience. Seule la carte Google Maps dépose des cookies : elle ne s'affiche que si vous l'acceptez. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
+    <div class="ck-b">
+        <button type="button" class="btn btn-sm ck-non" data-cookies="non">Refuser</button>
+        <button type="button" class="btn btn-ink btn-sm" data-cookies="ok">Accepter</button>
+    </div>
+</div>
+
+<script src="js/main.js?v=2026-10-04c"></script>
 </body>
 </html>

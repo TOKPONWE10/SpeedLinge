@@ -100,4 +100,40 @@
       window.open('https://wa.me/' + NUMERO + '?text=' + encodeURIComponent(lignes.join('\n')), '_blank', 'noopener');
     });
   }
+
+  // Cookies : seule la carte Google Maps en dépose, elle attend donc l'accord du visiteur.
+  // Le choix est gardé dans le navigateur ; sans stockage possible, la bannière revient à chaque visite.
+  var CLE = 'speedlinge-cookies';
+  var bandeau = $('#ck');
+  function lireChoix() {
+    try { return localStorage.getItem(CLE); } catch (e) { return null; }
+  }
+  function afficherCarte() {
+    var frame = $('#map iframe');
+    if (!frame || frame.getAttribute('src')) return;
+    frame.src = frame.getAttribute('data-src');
+    frame.hidden = false;
+    $('#map').classList.add('is-on');
+  }
+  function choisir(valeur) {
+    try { localStorage.setItem(CLE, valeur); } catch (e) {}
+    if (bandeau) bandeau.hidden = true;
+    if (valeur === 'ok') { afficherCarte(); return; }
+    var frame = $('#map iframe');
+    if (frame && frame.getAttribute('src')) {
+      frame.removeAttribute('src');
+      frame.hidden = true;
+      $('#map').classList.remove('is-on');
+    }
+  }
+  $$('[data-cookies]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-cookies');
+      if (v === 'gerer') { if (bandeau) bandeau.hidden = false; return; }
+      choisir(v);
+    });
+  });
+  var choix = lireChoix();
+  if (choix === 'ok') afficherCarte();
+  else if (!choix && bandeau) bandeau.hidden = false;
 })();
