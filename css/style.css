@@ -340,6 +340,61 @@ h2 { margin-top: 1.3rem; font-size: clamp(2.1rem, 4.5vw, 3.55rem); line-height: 
 .plan li s { margin-left: .7rem; font-size: .84rem; color: var(--muted); }
 .plan .lk { margin-top: auto; }
 
+/* Abonnements mis en avant : fond bleu de la marque, titre et prix en grand */
+.abo { background: var(--blue); color: var(--white); }
+.abo .eyebrow { color: #FFD08A; }
+.abo-hd { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.abo-t {
+    margin-top: .8rem; font-size: clamp(3.4rem, 11vw, 8.5rem); font-weight: 500;
+    line-height: .92; letter-spacing: -.045em;
+}
+.abo-s { margin-top: 1.2rem; max-width: 40rem; font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: rgba(255, 255, 255, .82); }
+.abo-s em { font-family: var(--serif); font-size: 1.15em; color: var(--white); }
+.abo .plans { border-top-color: rgba(255, 255, 255, .5); }
+.abo .plan + .plan { border-color: rgba(255, 255, 255, .2); }
+.abo .plan-k, .abo .plan-d { color: rgba(255, 255, 255, .7); }
+.abo .plan h3 { color: #FFD08A; }
+.abo .plan li { border-top-color: rgba(255, 255, 255, .22); font-size: 1rem; align-items: center; }
+.abo .plan li b { font-size: clamp(2rem, 3.4vw, 2.6rem); font-weight: 500; color: var(--white); }
+.abo .plan li s { color: rgba(255, 255, 255, .55); font-size: .95rem; }
+.abo .plan .lk { color: var(--white); }
+
+.express {
+    display: grid; gap: 1.6rem; align-items: center;
+    margin-top: clamp(2.5rem, 5vw, 4rem); padding: clamp(1.6rem, 3.5vw, 2.6rem);
+    border-radius: 10px; background: var(--ink);
+}
+@media (min-width: 800px) { .express { grid-template-columns: 1fr auto; } }
+.express-k { font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); }
+.express-t { margin-top: .5rem; font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.05; letter-spacing: -.02em; }
+.express-t em { color: var(--orange); }
+.express-p { margin-top: .7rem; max-width: 36rem; color: rgba(255, 255, 255, .75); }
+
+.price-x h3 { color: var(--orange); }
+
+/* Boutique */
+.shop-hd { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem 3rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.shop-hd .sec-hd { margin-bottom: 0; }
+.shop { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(.6rem, 1.4vw, 1.1rem); }
+@media (min-width: 900px) {
+    .shop { grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(180px, 17vw, 240px); }
+    .shop-w { grid-column: span 2; }
+    .shop-t { grid-row: span 2; }
+}
+.shop-i { position: relative; overflow: hidden; border-radius: 8px; background: var(--sky); aspect-ratio: 1; }
+@media (max-width: 899px) { .shop-w { grid-column: span 2; aspect-ratio: 16 / 10; } }
+@media (min-width: 900px) { .shop-i { aspect-ratio: auto; } }
+.shop-i img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.shop-i:hover img { transform: scale(1.04); }
+.shop-i figcaption {
+    position: absolute; left: .7rem; bottom: .7rem; padding: .3rem .7rem; border-radius: 999px;
+    background: rgba(248, 246, 241, .92); font-size: .78rem; font-weight: 600;
+}
+
+.front { margin-top: clamp(3rem, 6vw, 5rem); border-radius: 12px; overflow: hidden; aspect-ratio: 1280 / 853; max-height: 620px; background: var(--sky); }
+.front img { width: 100%; height: 100%; object-fit: cover; }
+.front + .map { margin-top: clamp(1rem, 2vw, 1.5rem); }
+
 /* Déroulé */
 .how { background: var(--ink); color: var(--white); }
 .how .eyebrow { color: #9CC3EE; }
